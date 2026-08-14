@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bo8wu37hrljva"]
 
 [ext_resource type="Script" uid="uid://1nasi1qu4xe4" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="PackedScene" uid="uid://csk7xact82fku" path="res://Sword.glb" id="2_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://vyhnu4kabfjl" path="res://Sprites/healthbarbacunder.png" id="3_vgqql"]
 [ext_resource type="Texture2D" uid="uid://bn4d03pqmkclx" path="res://Sprites/healthbarover.png" id="4_fkybt"]
 
@@ -74,6 +73,9 @@ _data = {
 &"Sword Swing": SubResource("Animation_6t5aa")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
+albedo_color = Color(0.8970878, 8.1629754e-05, 0.703661, 1)
+
 [node name="Player" type="CharacterBody3D" unique_id=1947781830]
 script = ExtResource("1_v0iea")
 
@@ -92,13 +94,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50487757, 0)
 [node name="SwordPoint" type="Node3D" parent="Camera3D" unique_id=107193062]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.50487757, 0)
 
-[node name="Sword" parent="Camera3D/SwordPoint" unique_id=1023542510 instance=ExtResource("2_cvnsp")]
-transform = Transform3D(0.03682371, -0.00050776254, 0.24727264, 0.04343692, -0.24609874, -0.0069739553, 0.2434281, 0.043990277, -0.03616085, 0.22450134, 0.5206879, -0.24922049)
-
 [node name="SeeCast" type="RayCast3D" parent="Camera3D" unique_id=1115658901]
 transform = Transform3D(2, 0, 0, 0, 2.0000005, 0, 0, 0, 2.0000002, 0, 0, 0)
 target_position = Vector3(0, 0, -1.5)
 collision_mask = 3
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Camera3D" unique_id=1805936788]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.2, -0.099999994, 0)
+spring_length = 0.75
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D/SpringArm3D" unique_id=1054018788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, 0.70000005)
+gizmo_extents = 0.05
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Camera3D/SpringArm3D/Marker3D" unique_id=1025474343]
+visible = false
+radius = 0.05
+material = SubResource("StandardMaterial3D_g4v7s")
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1464334718]
 wait_time = 0.75
