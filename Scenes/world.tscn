@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d18rp2qqn532g" path="res://tavernprops/stool.glb" id="12_hgpy0"]
 [ext_resource type="PackedScene" uid="uid://c4cecwqra5ep0" path="res://tavernprops/torch.glb" id="13_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://tavernprops/storage.glb" id="14_0pcbe"]
+[ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potion_testing.tscn" id="14_e0ngr"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bkvmg"]
 
@@ -420,3 +421,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2259731, 1.2228286, -10.471
 
 [node name="storage2" parent="." unique_id=1507233548 instance=ExtResource("14_0pcbe")]
 transform = Transform3D(0.58819467, 0, 0.8087194, 0, 1, 0, -0.8087194, 0, 0.58819467, 8.610201, 0.0026955127, -4.5483494)
+
+[node name="PotionTesting" parent="." unique_id=1280477423 instance=ExtResource("14_e0ngr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3806353, 1.1123469, 0)

@@ -54,7 +54,12 @@ func _physics_process(delta: float) -> void:
 	
 	if see_cast.is_colliding():
 		var target = see_cast.get_collider()
-		print(target)
+		#f target has_method("interact"):
+		
+		#print("You can interact"):
+	
+	
+	
 	
 	# Add the gravity.
 	if not is_on_floor():
