@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5qnsyosboub2"
-path.s3tc="res://.godot/imported/GobelinCavity.png-0715134034b46e1ee7906b40390c556a.s3tc.ctex"
+path.s3tc="res://.godot/imported/GobelinCavity.png-2b7a8473b6e5442ff220c16d73d61848.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/enemy/GobelinCavity.png"
-dest_files=["res://.godot/imported/GobelinCavity.png-0715134034b46e1ee7906b40390c556a.s3tc.ctex"]
+source_file="res://enemy/GobelinCavity.png"
+dest_files=["res://.godot/imported/GobelinCavity.png-2b7a8473b6e5442ff220c16d73d61848.s3tc.ctex"]
 
 [params]
 

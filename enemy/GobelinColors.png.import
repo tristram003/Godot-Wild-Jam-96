@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://db3fun5vabp8a"
-path.s3tc="res://.godot/imported/GobelinColors.png-0f308c24296a2847e0cfeb940e705841.s3tc.ctex"
+path.s3tc="res://.godot/imported/GobelinColors.png-e7632bacc795a40285d289c6337dd15c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/enemy/GobelinColors.png"
-dest_files=["res://.godot/imported/GobelinColors.png-0f308c24296a2847e0cfeb940e705841.s3tc.ctex"]
+source_file="res://enemy/GobelinColors.png"
+dest_files=["res://.godot/imported/GobelinColors.png-e7632bacc795a40285d289c6337dd15c.s3tc.ctex"]
 
 [params]
 

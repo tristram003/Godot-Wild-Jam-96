@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvppif878if7p"
-path.s3tc="res://.godot/imported/pinetree_pine.png-5ceb6e9b3f727be1e5612c2920774f7a.s3tc.ctex"
+path.s3tc="res://.godot/imported/pinetree_pine.png-75cdc0756cccdc765dcddc4d303585fa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/pinetree_pine.png"
-dest_files=["res://.godot/imported/pinetree_pine.png-5ceb6e9b3f727be1e5612c2920774f7a.s3tc.ctex"]
+source_file="res://pinetree_pine.png"
+dest_files=["res://.godot/imported/pinetree_pine.png-75cdc0756cccdc765dcddc4d303585fa.s3tc.ctex"]
 
 [params]
 

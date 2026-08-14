@@ -4,18 +4,20 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d1jibfiqo77ml"
-path="res://.godot/imported/InteriorPack.glb-2c0801b26b94e90db08edd478c0b472a.scn"
+path="res://.godot/imported/InteriorPack.glb-eda868166cfc6e20aea1a12a7e59d8b6.scn"
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/tavernprops/InteriorPack.glb"
-dest_files=["res://.godot/imported/InteriorPack.glb-2c0801b26b94e90db08edd478c0b472a.scn"]
+source_file="res://tavernprops/InteriorPack.glb"
+dest_files=["res://.godot/imported/InteriorPack.glb-eda868166cfc6e20aea1a12a7e59d8b6.scn"]
 
 [params]
 
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -40,3 +42,4 @@ materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

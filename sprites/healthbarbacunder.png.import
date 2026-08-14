@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vyhnu4kabfjl"
-path="res://.godot/imported/healthbarbacunder.png-ddf6a1d9a2d22ce80191f9b5a0fd448f.ctex"
+path="res://.godot/imported/healthbarbacunder.png-1dacce10c23f58cbfd7d2f638de7c2cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/sprites/healthbarbacunder.png"
-dest_files=["res://.godot/imported/healthbarbacunder.png-ddf6a1d9a2d22ce80191f9b5a0fd448f.ctex"]
+source_file="res://Sprites/healthbarbacunder.png"
+dest_files=["res://.godot/imported/healthbarbacunder.png-1dacce10c23f58cbfd7d2f638de7c2cb.ctex"]
 
 [params]
 

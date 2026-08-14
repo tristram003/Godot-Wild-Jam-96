@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn4d03pqmkclx"
-path="res://.godot/imported/healthbarover.png-bbe0b303411a0b4c52a770a780a96b7a.ctex"
+path="res://.godot/imported/healthbarover.png-e2aa1b6b25cdc81b587d23fd3a729ea6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objects/3D Assets Pack/sprites/healthbarover.png"
-dest_files=["res://.godot/imported/healthbarover.png-bbe0b303411a0b4c52a770a780a96b7a.ctex"]
+source_file="res://Sprites/healthbarover.png"
+dest_files=["res://.godot/imported/healthbarover.png-e2aa1b6b25cdc81b587d23fd3a729ea6.ctex"]
 
 [params]
 

@@ -5,6 +5,7 @@
 - Three types of mushrooms
 - Three types of herbs
 - No inventory system, all ingredients are hard objects throughout the world you carry around 
+	- Tristan 
 
 
 ### Make Potions
