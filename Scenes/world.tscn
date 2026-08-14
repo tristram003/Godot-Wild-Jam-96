@@ -2,20 +2,19 @@
 
 [ext_resource type="ArrayMesh" uid="uid://cdvcs856yfyvc" path="res://Sprites/grass2.res" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://bo8wu37hrljva" path="res://Scenes/player.tscn" id="1_a02cp"]
-[ext_resource type="PackedScene" uid="uid://ykscxcyglvd5" path="res://Objects/3D Assets Pack/tavern.glb" id="2_go701"]
-[ext_resource type="PackedScene" uid="uid://daa2l8vmuf8tp" path="res://Objects/3D Assets Pack/CliffProps/cliffProps1.glb" id="3_o06y3"]
-[ext_resource type="PackedScene" uid="uid://3oj8n1gani4b" path="res://Objects/3D Assets Pack/CliffProps/cliffProps2.glb" id="4_k7acu"]
-[ext_resource type="PackedScene" uid="uid://bip16rlmfvdx1" path="res://Objects/3D Assets Pack/CliffProps/cliffProps3.glb" id="5_5v1tr"]
-[ext_resource type="PackedScene" uid="uid://bdaluxu77khyo" path="res://Objects/3D Assets Pack/CliffProps/cliffProps4.glb" id="6_0fj1v"]
-[ext_resource type="PackedScene" uid="uid://boi81b6ntdmpk" path="res://Objects/3D Assets Pack/CliffProps/cliffProps5.glb" id="7_ikia7"]
+[ext_resource type="PackedScene" uid="uid://ykscxcyglvd5" path="res://tavern.glb" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://daa2l8vmuf8tp" path="res://CliffProps/cliffProps1.glb" id="3_o06y3"]
+[ext_resource type="PackedScene" uid="uid://3oj8n1gani4b" path="res://CliffProps/cliffProps2.glb" id="4_k7acu"]
+[ext_resource type="PackedScene" uid="uid://bip16rlmfvdx1" path="res://CliffProps/cliffProps3.glb" id="5_5v1tr"]
+[ext_resource type="PackedScene" uid="uid://bdaluxu77khyo" path="res://CliffProps/cliffProps4.glb" id="6_0fj1v"]
+[ext_resource type="PackedScene" uid="uid://boi81b6ntdmpk" path="res://CliffProps/cliffProps5.glb" id="7_ikia7"]
 [ext_resource type="PackedScene" uid="uid://3c5gffpmrij0" path="res://Scenes/pinetree.tscn" id="8_k7acu"]
-[ext_resource type="PackedScene" uid="uid://cqu4wjcboc0ye" path="res://Objects/3D Assets Pack/tavernprops/crate.glb" id="11_kn0ld"]
-[ext_resource type="PackedScene" uid="uid://d18rp2qqn532g" path="res://Objects/3D Assets Pack/tavernprops/stool.glb" id="12_hgpy0"]
-[ext_resource type="PackedScene" uid="uid://c4cecwqra5ep0" path="res://Objects/3D Assets Pack/tavernprops/torch.glb" id="13_t2t4p"]
-[ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://Objects/3D Assets Pack/tavernprops/storage.glb" id="14_0pcbe"]
+[ext_resource type="PackedScene" uid="uid://cqu4wjcboc0ye" path="res://tavernprops/crate.glb" id="11_kn0ld"]
+[ext_resource type="PackedScene" uid="uid://d18rp2qqn532g" path="res://tavernprops/stool.glb" id="12_hgpy0"]
+[ext_resource type="PackedScene" uid="uid://c4cecwqra5ep0" path="res://tavernprops/torch.glb" id="13_t2t4p"]
+[ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://tavernprops/storage.glb" id="14_0pcbe"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yp4wr"]
-size = Vector3(50, 1, 50)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bkvmg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a02cp"]
 albedo_color = Color(0.2, 0.3372549, 0.18039216, 1)
@@ -51,7 +50,7 @@ volumetric_fog_density = 0.0025
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1321086191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.092623, -0.6436653, -1.6847286)
-shape = SubResource("BoxShape3D_yp4wr")
+shape = SubResource("WorldBoundaryShape3D_bkvmg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=990481259]
 material_override = SubResource("StandardMaterial3D_a02cp")
