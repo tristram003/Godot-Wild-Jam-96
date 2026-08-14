@@ -49,7 +49,6 @@ volumetric_fog_density = 0.0025
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1642167714]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1321086191]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.092623, -0.6436653, -1.6847286)
 shape = SubResource("WorldBoundaryShape3D_bkvmg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=990481259]

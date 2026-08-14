@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bo8wu37hrljva"]
 
 [ext_resource type="Script" uid="uid://1nasi1qu4xe4" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="PackedScene" uid="uid://csk7xact82fku" path="res://Objects/3D Assets Pack/Sword.glb" id="2_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://vyhnu4kabfjl" path="res://Objects/3D Assets Pack/sprites/healthbarbacunder.png" id="3_vgqql"]
-[ext_resource type="Texture2D" uid="uid://bn4d03pqmkclx" path="res://Objects/3D Assets Pack/sprites/healthbarover.png" id="4_fkybt"]
+[ext_resource type="PackedScene" uid="uid://csk7xact82fku" path="res://Sword.glb" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://vyhnu4kabfjl" path="res://Sprites/healthbarbacunder.png" id="3_vgqql"]
+[ext_resource type="Texture2D" uid="uid://bn4d03pqmkclx" path="res://Sprites/healthbarover.png" id="4_fkybt"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f60y1"]
 radius = 0.4
@@ -95,6 +95,11 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.50487
 [node name="Sword" parent="Camera3D/SwordPoint" unique_id=1023542510 instance=ExtResource("2_cvnsp")]
 transform = Transform3D(0.03682371, -0.00050776254, 0.24727264, 0.04343692, -0.24609874, -0.0069739553, 0.2434281, 0.043990277, -0.03616085, 0.22450134, 0.5206879, -0.24922049)
 
+[node name="SeeCast" type="RayCast3D" parent="Camera3D" unique_id=1115658901]
+transform = Transform3D(2, 0, 0, 0, 2.0000005, 0, 0, 0, 2.0000002, 0, 0, 0)
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 3
+
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1464334718]
 wait_time = 0.75
 
@@ -116,10 +121,6 @@ offset_top = 613.0
 offset_right = 1198.0
 offset_bottom = 636.0
 text = "0"
-
-[node name="SeeCast" type="RayCast3D" parent="." unique_id=1115658901]
-transform = Transform3D(-1.9999571, 0.0129065225, 0.0022867548, 0.0011185297, -0.17960088, 1.9919196, 0.013059669, 1.9918784, 0.1795898, -0.0046482086, 0.48419982, 0.06592083)
-collision_mask = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2077748246]
 
