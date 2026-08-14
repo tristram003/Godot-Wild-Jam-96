@@ -14,6 +14,7 @@ var maxHp = 50
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
 @onready var cooldown = $AttackCooldown
+@onready var see_cast: RayCast3D = $Camera3D/SeeCast
 
 
 func player():
@@ -51,8 +52,8 @@ func _process(_delta):
 
 func _physics_process(delta: float) -> void:
 	
-	if $SeeCast.is_colliding():
-		var target = $SeeCast.get_collider()
+	if see_cast.is_colliding():
+		var target = see_cast.get_collider()
 		print(target)
 	
 	# Add the gravity.
