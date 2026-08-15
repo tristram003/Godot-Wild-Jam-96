@@ -25,9 +25,6 @@ _data = {
 &"Sword Swing": SubResource("Animation_6t5aa")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4v7s"]
-albedo_color = Color(0.8970878, 8.1629754e-05, 0.703661, 1)
-
 [node name="Player" type="CharacterBody3D" unique_id=1947781830]
 script = ExtResource("1_v0iea")
 
@@ -43,16 +40,20 @@ libraries/ = SubResource("AnimationLibrary_vgqql")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1007224198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50487757, 0)
 
-<<<<<<< HEAD
-=======
-[node name="SwordPoint" type="Node3D" parent="Camera3D" unique_id=107193062]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, -0.50487757, 0)
-
->>>>>>> 2a123ad78e2d19cbd51a36369d8ce03873b393c4
 [node name="SeeCast" type="RayCast3D" parent="Camera3D" unique_id=1115658901]
-transform = Transform3D(2, 0, 0, 0, 2.0000005, 0, 0, 0, 2.0000002, 0, 0, 0)
-target_position = Vector3(0, 0, -1.5)
+target_position = Vector3(0, 0, -2.25)
 collision_mask = 3
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Camera3D" unique_id=1633034838]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.2, -0.099999994, 0)
+
+[node name="ItemHolder" type="Marker3D" parent="Camera3D/SpringArm3D" unique_id=328368745]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.940697e-08, 0, 1)
+gizmo_extents = 0.05
+
+[node name="TestItem" type="CSGSphere3D" parent="Camera3D/SpringArm3D/ItemHolder" unique_id=1026879945]
+visible = false
+radius = 0.05
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1464334718]
 wait_time = 0.75
