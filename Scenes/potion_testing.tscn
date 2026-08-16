@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c6eabx4g4gl6a"]
 
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scenes/object_interact.gd" id="1_d8b74"]
 [ext_resource type="PackedScene" uid="uid://dyebyu0cb5ugd" path="res://PotionTesting.glb" id="1_tbtvv"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
@@ -10,9 +11,13 @@ radius = 0.10573022
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 size = Vector3(0.06439209, 0.069885254, 0.06814957)
 
-[node name="PotionTesting" type="RigidBody3D" unique_id=1280477423]
+[node name="PotionTesting" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+collision_layer = 2
+collision_mask = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_d8b74")
 
 [node name="PotionTesting" parent="." unique_id=1926438693 instance=ExtResource("1_tbtvv")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

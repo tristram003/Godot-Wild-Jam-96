@@ -3,19 +3,19 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 6
 
-var sensivity =0.003 
+var sensivity = 0.003 
 var onCooldown = false
 var gold = 15
 var hp = 50
-var maxHp = 50
+var toggle_on = false
+var held_target = null
 
 @onready var goldLabel = $HUD/GoldLabel
-@onready var hpBar= $HUD/HPbar
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
 @onready var cooldown = $AttackCooldown
-@onready var see_cast: RayCast3D = $Camera3D/SeeCast
-
+@onready var see_cast = $Camera3D/SeeCast
+@onready var hand = $Camera3D/SpringArm3D/ItemHolder
 
 func player():
 	pass
@@ -25,41 +25,48 @@ func _unhandled_input(event):
 		rotate_y(-event.relative.x * sensivity)
 		camera.rotate_x(-event.relative.y * sensivity)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(70))
-	
 
 func _ready():
-	hpBar.max_value = 50
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func attack():
-	if Input.is_action_just_pressed("Attack") and onCooldown == false:
-		animationPlayer.play("Sword Swing")
-		onCooldown = true
-		cooldown.start()
-
+#func interact():
+	#if Input.is_action_just_pressed("interact"):
+		#print("Hello!")
 
 func update_HUD():
-	hpBar.value = hp
 	goldLabel.text = str(gold)
-
 
 func _process(_delta):
 	update_HUD()
-	attack()
+	
+	# Quits out the game
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
+
+	# Handles ojbect interaction 
+	if Input.is_action_just_pressed("interact"):
+		if held_target:
+			held_target.freeze = false
+			held_target = null
+			
+		elif see_cast.is_colliding():
+			var target = see_cast.get_collider()
+			if target.is_in_group("pickable"):
+				held_target = target
+				held_target.freeze = true
+
+	if held_target:
+		held_target.global_position = hand.global_position
+		held_target.global_rotation = hand.global_rotation
 	
+	# Handles UI
+	$CanvasLayer/BoxContainer/Interact.hide()
+	if see_cast.is_colliding() and held_target == null:
+		var target = see_cast.get_collider()
+		if target.has_method("interact"):
+			$CanvasLayer/BoxContainer/Interact.show()
 
 func _physics_process(delta: float) -> void:
-	
-	if see_cast.is_colliding():
-		var target = see_cast.get_collider()
-		#f target has_method("interact"):
-		
-		#print("You can interact"):
-	
-	
-	
 	
 	# Add the gravity.
 	if not is_on_floor():
@@ -81,8 +88,3 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
-
-
-func _on_attack_cooldown_timeout():
-	onCooldown = false
-	pass # Replace with function body.

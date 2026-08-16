@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://bo8wu37hrljva"]
 
 [ext_resource type="Script" uid="uid://1nasi1qu4xe4" path="res://Scripts/player.gd" id="1_v0iea"]
-[ext_resource type="Texture2D" uid="uid://vyhnu4kabfjl" path="res://Sprites/healthbarbacunder.png" id="3_vgqql"]
-[ext_resource type="Texture2D" uid="uid://bn4d03pqmkclx" path="res://Sprites/healthbarover.png" id="4_fkybt"]
+[ext_resource type="FontFile" uid="uid://b4tn5ckqslsqq" path="res://assets/fonts/poco/Poco.ttf" id="4_vgqql"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f60y1"]
 radius = 0.4
@@ -45,36 +44,29 @@ target_position = Vector3(0, 0, -2.25)
 collision_mask = 3
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Camera3D" unique_id=1633034838]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.2, -0.099999994, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.113074794, -0.099999994, 0)
 
 [node name="ItemHolder" type="Marker3D" parent="Camera3D/SpringArm3D" unique_id=328368745]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.940697e-08, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023005754, -0.2, 2)
 gizmo_extents = 0.05
-
-[node name="TestItem" type="CSGSphere3D" parent="Camera3D/SpringArm3D/ItemHolder" unique_id=1026879945]
-visible = false
-radius = 0.05
 
 [node name="AttackCooldown" type="Timer" parent="." unique_id=1464334718]
 wait_time = 0.75
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=636174059]
 
-[node name="HPbar" type="TextureProgressBar" parent="HUD" unique_id=1437504223]
-offset_left = 39.0
-offset_top = 26.0
-offset_right = 352.0
-offset_bottom = 94.0
-max_value = 50.0
-value = 50.0
-texture_under = ExtResource("3_vgqql")
-texture_progress = ExtResource("4_fkybt")
-
 [node name="GoldLabel" type="Label" parent="HUD" unique_id=867862177]
-offset_left = 1106.0
-offset_top = 613.0
-offset_right = 1198.0
-offset_bottom = 636.0
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_vgqql")
+theme_override_font_sizes/font_size = 28
 text = "0"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2077748246]
@@ -95,7 +87,8 @@ grow_vertical = 2
 [node name="Interact" type="Label" parent="CanvasLayer/BoxContainer" unique_id=2060004510]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_vgqql")
 theme_override_font_sizes/font_size = 20
-text = "Press E to Interact"
+text = "Click to Interact"
 
 [connection signal="timeout" from="AttackCooldown" to="." method="_on_attack_cooldown_timeout"]
