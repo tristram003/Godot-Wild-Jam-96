@@ -7,26 +7,42 @@ extends CharacterBody3D
 @export var follow_speed: float = 10.0
 @export var camera: Camera3D
 
-
+var is_active: bool = false
 var is_dragging: bool = false
 var mortar_center: Vector3 = Vector3.ZERO
 var current_target_pos: Vector3 = Vector3.ZERO
 var start_pos: Vector3
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
 	if mortar:
 		mortar_center = mortar.global_position
 	current_target_pos = global_position
 	start_pos = current_target_pos
-	
+
+
+func toggle_active() -> void:
+	is_active = !is_active
+	if not is_active:
+		hide()
+		return
+	if is_active:
+		show()
+		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+
+
 func _input(event: InputEvent) -> void:
+	if not is_active:
+		return
 	if event.is_action_pressed("Attack"):
 		is_dragging = true
 	elif event.is_action_released("Attack"):
 		is_dragging = false
 
+
 func _process(delta: float) -> void:
+	if not is_active:
+		return
 	if not is_dragging:
 		if global_position != start_pos:
 			current_target_pos = start_pos
