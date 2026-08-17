@@ -34,9 +34,9 @@ func toggle_active() -> void:
 func _input(event: InputEvent) -> void:
 	if not is_active:
 		return
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("pickup"):
 		is_dragging = true
-	elif event.is_action_released("interact"):
+	elif event.is_action_released("pickup"):
 		is_dragging = false
 
 

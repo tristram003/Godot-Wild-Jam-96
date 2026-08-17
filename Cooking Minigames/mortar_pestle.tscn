@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://bnurjkh3ycsy6"]
 
+[ext_resource type="Script" uid="uid://csxwgvfwsde4m" path="res://Cooking Minigames/mortar_pestle_minigame.gd" id="1_k2xrq"]
 [ext_resource type="Script" uid="uid://dtvrbxwiymc6l" path="res://Cooking Minigames/pestle_controller.gd" id="1_w4pil"]
+[ext_resource type="PackedScene" uid="uid://bmojctycnyp4t" path="res://components/interactable_component.tscn" id="2_dpl58"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_yf5fn"]
 height = 0.225
@@ -114,13 +116,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gbx43")
 
 [node name="MortarPestle" type="Node3D" unique_id=993208658]
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=570171544]
-transform = Transform3D(0.9848078, 0.13399109, -0.110453814, 0, 0.63607854, 0.7716243, 0.17364809, -0.75990164, 0.6264151, -0.099930756, 0.7577498, 0.56451714)
-fov = 30.687462
-
-[node name="PestleStartPos" type="Marker3D" parent="." unique_id=1000156793]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28119016, 0)
+script = ExtResource("1_k2xrq")
 
 [node name="PestleController" type="CharacterBody3D" parent="." unique_id=1611940066 node_paths=PackedStringArray("mortar", "camera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10418187, 0)
@@ -141,6 +137,13 @@ shape = SubResource("SphereShape3D_g4v7s")
 [node name="Mesh" type="MeshInstance3D" parent="PestleController" unique_id=1230636623]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09581813, 0)
 mesh = SubResource("ArrayMesh_nbqum")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=570171544]
+transform = Transform3D(0.9848078, 0.13399109, -0.110453814, 0, 0.63607854, 0.7716243, 0.17364809, -0.75990164, 0.6264151, -0.099930756, 0.7577498, 0.56451714)
+fov = 30.687462
+
+[node name="PestleStartPos" type="Marker3D" parent="." unique_id=1000156793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28119016, 0)
 
 [node name="Mortar" type="Node3D" parent="." unique_id=68836419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.071943805, 0)
@@ -340,3 +343,7 @@ debug_color = Color(0, 0.6, 0.16862746, 1)
 [node name="PestleMesh" type="MeshInstance3D" parent="." unique_id=811775488]
 transform = Transform3D(0.9975706, 0.0029345003, 0.06960104, -0.05099558, 0.711425, 0.7009092, -0.047459118, -0.7027557, 0.7098463, -0.03203729, 0.033962637, -0.097699076)
 mesh = SubResource("ArrayMesh_k2xrq")
+
+[node name="InteractableComponent" parent="." unique_id=1744533419 instance=ExtResource("2_dpl58")]
+
+[connection signal="interacted" from="InteractableComponent" to="." method="_on_interactable_component_interacted"]

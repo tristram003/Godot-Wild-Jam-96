@@ -1,8 +1,14 @@
 extends CharacterBody3D
+class_name Player
+
+enum GameState {ACTIVE, DISABLED}
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 6
 
+var game_state: GameState = GameState.ACTIVE :
+	set(val):
+		game_state = val
 var sensivity = 0.003 
 var onCooldown = false
 var gold = 15
@@ -17,8 +23,8 @@ var held_target = null
 @onready var see_cast = $Camera3D/SeeCast
 @onready var hand = $Camera3D/SpringArm3D/ItemHolder
 
-func player():
-	pass
+func _enter_tree() -> void:
+	Gamemaster.player = self
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -28,6 +34,7 @@ func _unhandled_input(event):
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
 
 #func interact():
 	#if Input.is_action_just_pressed("interact"):
@@ -35,6 +42,16 @@ func _ready():
 
 func update_HUD():
 	goldLabel.text = str(gold)
+	if Gamemaster.is_in_minigame:
+		camera.current = false
+	elif !Gamemaster.is_in_minigame:
+		camera.make_current()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and see_cast.is_colliding():
+		var target = see_cast.get_collider()
+		if target.is_in_group("interactable"):
+			target.interact()
 
 func _process(_delta):
 	update_HUD()
@@ -43,7 +60,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
 
-	# Handles ojbect interaction 
+	# Handles ojbect pickup
 	if Input.is_action_just_pressed("pickup"):
 		if held_target:
 			held_target.freeze = false
@@ -62,8 +79,10 @@ func _process(_delta):
 	$CanvasLayer/BoxContainer/Interact.hide()
 	if see_cast.is_colliding() and held_target == null:
 		var target = see_cast.get_collider()
-		if target.has_method("interact"):
+		if target.is_in_group("interactable"):
+			$CanvasLayer/BoxContainer/Interact.text = target.display_text
 			$CanvasLayer/BoxContainer/Interact.show()
+
 
 func _physics_process(delta: float) -> void:
 	
