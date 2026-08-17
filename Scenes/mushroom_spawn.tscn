@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://8ybkhct301la"]
+
+[ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scenes/mushroom_spawn.gd" id="1_hhodc"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
+radius = 10.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="MushroomSpawn" type="Node3D" unique_id=911568623 node_paths=PackedStringArray("mushroom_placeholder")]
+script = ExtResource("1_hhodc")
+mushroom_placeholder = NodePath("MushroomPLACEHOLDER")
+
+[node name="Timer" type="Timer" parent="." unique_id=1370848640]
+wait_time = 5.0
+autostart = true
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2126496167]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=491320408]
+shape = SubResource("SphereShape3D_yf5fn")
+
+[node name="Marker3D" type="Marker3D" parent="Area3D" unique_id=1714474126]
+
+[node name="MushroomPLACEHOLDER" type="MeshInstance3D" parent="." unique_id=1783442815]
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MushroomPLACEHOLDER" unique_id=1907553526]
+shape = SubResource("BoxShape3D_g4v7s")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

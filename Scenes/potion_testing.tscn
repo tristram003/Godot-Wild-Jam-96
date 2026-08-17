@@ -14,7 +14,6 @@ size = Vector3(0.06439209, 0.069885254, 0.06814957)
 [node name="PotionTesting" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 collision_layer = 2
-collision_mask = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_d8b74")

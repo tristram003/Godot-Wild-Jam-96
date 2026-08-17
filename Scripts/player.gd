@@ -44,11 +44,10 @@ func _process(_delta):
 		get_tree().quit()
 
 	# Handles ojbect interaction 
-	if Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("pickup"):
 		if held_target:
 			held_target.freeze = false
 			held_target = null
-			
 		elif see_cast.is_colliding():
 			var target = see_cast.get_collider()
 			if target.is_in_group("pickable"):
