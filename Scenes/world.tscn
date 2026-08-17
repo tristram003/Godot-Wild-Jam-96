@@ -75,6 +75,8 @@ sky_mode = 1
 transform = Transform3D(0.8061968, 0, -0.5916474, 0, 1, 0, 0.5916474, 0, 0.8061968, 5.744193, 0.008583084, -8.113627)
 
 [node name="Cliff 1" type="StaticBody3D" parent="." unique_id=1500051816]
+collision_layer = 7
+collision_mask = 7
 
 [node name="cliffProps21" parent="Cliff 1" unique_id=1186817225 instance=ExtResource("3_o06y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.98541, 0, -24.232378)
@@ -142,6 +144,8 @@ shape = SubResource("BoxShape3D_o06y3")
 
 [node name="Cliff 2" type="StaticBody3D" parent="." unique_id=1115256888]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+collision_layer = 7
+collision_mask = 7
 
 [node name="cliffProps21" parent="Cliff 2" unique_id=569503371 instance=ExtResource("3_o06y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.98541, 0, -24.232378)
@@ -209,6 +213,8 @@ shape = SubResource("BoxShape3D_o06y3")
 
 [node name="Cliff 3" type="StaticBody3D" parent="." unique_id=1079505654]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.31895828, 0, -0.6475258)
+collision_layer = 7
+collision_mask = 7
 
 [node name="cliffProps21" parent="Cliff 3" unique_id=886982192 instance=ExtResource("3_o06y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.98541, 0, -24.232378)
@@ -276,6 +282,8 @@ shape = SubResource("BoxShape3D_o06y3")
 
 [node name="Cliff 4" type="StaticBody3D" parent="." unique_id=216869565]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.28415674, 0, 0)
+collision_layer = 7
+collision_mask = 3
 
 [node name="cliffProps21" parent="Cliff 4" unique_id=1716319281 instance=ExtResource("3_o06y3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.98541, 0, -24.232378)
