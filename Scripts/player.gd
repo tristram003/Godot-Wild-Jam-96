@@ -16,12 +16,15 @@ var hp = 50
 var toggle_on = false
 var held_target = null
 
-@onready var goldLabel = $HUD/GoldLabel
+
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
 @onready var cooldown = $AttackCooldown
 @onready var see_cast = $Camera3D/SeeCast
 @onready var hand = $Camera3D/SpringArm3D/ItemHolder
+@onready var hud: CanvasLayer = $HUD
+@onready var interact_text: Label = $HUD/BoxContainer/Interact
+@onready var goldLabel = $HUD/GoldLabel
 
 func _enter_tree() -> void:
 	Gamemaster.player = self
@@ -36,10 +39,6 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 
-#func interact():
-	#if Input.is_action_just_pressed("interact"):
-		#print("Hello!")
-
 func update_HUD():
 	goldLabel.text = str(gold)
 	if Gamemaster.is_in_minigame:
@@ -50,17 +49,13 @@ func update_HUD():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and see_cast.is_colliding():
 		var target = see_cast.get_collider()
-		if target.is_in_group("interactable"):
+		if target.is_in_group("interactable") and target is Interactable:
 			target.interact()
 
-func _process(_delta):
-	update_HUD()
-	
-	# Quits out the game
+		# Quits out the game
 	if Input.is_action_just_pressed("escape"):
 		get_tree().quit()
 
-	# Handles ojbect pickup
 	if Input.is_action_just_pressed("pickup"):
 		if held_target:
 			held_target.freeze = false
@@ -71,18 +66,24 @@ func _process(_delta):
 				held_target = target
 				held_target.freeze = true
 
+
+func _process(_delta):
+	update_HUD()
+	
+	# Handles ojbect pickup
 	if held_target:
 		held_target.global_position = hand.global_position
 		held_target.global_rotation = hand.global_rotation
+		
 	
 	# Handles UI
-	$CanvasLayer/BoxContainer/Interact.hide()
-	if see_cast.is_colliding() and held_target == null:
+	if see_cast.is_colliding():
 		var target = see_cast.get_collider()
 		if target.is_in_group("interactable"):
-			$CanvasLayer/BoxContainer/Interact.text = target.display_text
-			$CanvasLayer/BoxContainer/Interact.show()
-
+			interact_text.text = target.display_text
+			interact_text.show()
+	else:
+			interact_text.hide()
 
 func _physics_process(delta: float) -> void:
 	
