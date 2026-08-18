@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://tavernprops/storage.glb" id="14_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bnurjkh3ycsy6" path="res://Cooking Minigames/mortar_pestle.tscn" id="14_axeuq"]
 [ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potion_testing.tscn" id="14_e0ngr"]
+[ext_resource type="PackedScene" uid="uid://8ybkhct301la" path="res://Scenes/mushroom_spawn.tscn" id="15_kn0ld"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_bkvmg"]
 
@@ -110,3 +111,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3412194, 0.99619365, 0.1636
 
 [node name="MortarPestle" parent="." unique_id=993208658 instance=ExtResource("14_axeuq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8897228, 1.1757362, -10.009408)
+
+[node name="MushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
