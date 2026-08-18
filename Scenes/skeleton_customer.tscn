@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cqi2om6t11noi"]
+
+[ext_resource type="Script" uid="uid://c46gphgciws1o" path="res://Scenes/customer.gd" id="1_y41tr"]
+[ext_resource type="PackedScene" uid="uid://db2gfp73s1bim" path="res://tavernprops/skeleton_mage.glb" id="2_y41tr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1.7134972, 2.6022682, 1.2773523)
+
+[node name="skeleton_customer" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+collision_layer = 2
+mass = 0.15
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_y41tr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556141100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.065877914, 1.2987509, -0.17431498)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="skeleton_mage" parent="." unique_id=145427795 instance=ExtResource("2_y41tr")]
