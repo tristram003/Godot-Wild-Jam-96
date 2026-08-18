@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://c4xqsybn2xxux"]
 
-[ext_resource type="Script" uid="uid://dycqgogucjpgx" path="res://Scenes/enemy.gd" id="1_287tu"]
-[ext_resource type="Texture2D" uid="uid://5qnsyosboub2" path="res://Objects/3D Assets Pack/enemy/GobelinCavity.png" id="2_0830c"]
-[ext_resource type="Texture2D" uid="uid://coljnpoc6w08g" path="res://Objects/3D Assets Pack/enemy/GobelinNormals.png" id="3_ghaa6"]
-[ext_resource type="Texture2D" uid="uid://db3fun5vabp8a" path="res://Objects/3D Assets Pack/enemy/GobelinColors.png" id="4_1dp5w"]
+[ext_resource type="Script" uid="uid://dycqgogucjpgx" path="res://Scripts/enemy.gd" id="1_287tu"]
+[ext_resource type="Texture2D" path="res://Objects/3D Assets Pack/enemy/GobelinCavity.png" id="2_0830c"]
+[ext_resource type="Texture2D" path="res://Objects/3D Assets Pack/enemy/GobelinNormals.png" id="3_ghaa6"]
+[ext_resource type="Texture2D" path="res://Objects/3D Assets Pack/enemy/GobelinColors.png" id="4_1dp5w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_arrlx"]
 resource_name = "Material.003"

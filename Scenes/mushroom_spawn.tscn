@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8ybkhct301la"]
 
-[ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scenes/mushroom_spawn.gd" id="1_hhodc"]
+[ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scripts/mushroom_spawn.gd" id="1_hhodc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
 radius = 10.0

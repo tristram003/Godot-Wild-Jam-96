@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csxwgvfwsde4m" path="res://Cooking Minigames/mortar_pestle_minigame.gd" id="1_k2xrq"]
 [ext_resource type="Script" uid="uid://dtvrbxwiymc6l" path="res://Cooking Minigames/pestle_controller.gd" id="1_w4pil"]
-[ext_resource type="PackedScene" uid="uid://bmojctycnyp4t" path="res://components/interactable_component.tscn" id="2_dpl58"]
+[ext_resource type="PackedScene" uid="uid://bmojctycnyp4t" path="res://components/interact/interactable_component.tscn" id="2_dpl58"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_yf5fn"]
 height = 0.225

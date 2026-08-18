@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bmojctycnyp4t"]
+
+[ext_resource type="Script" uid="uid://bpth17gydqlad" path="res://components/interact/interactable_component.gd" id="1_ao1mr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_02sbt"]
+
+[node name="InteractableComponent" type="Area3D" unique_id=1744533419 groups=["interactable"]]
+collision_layer = 2
+script = ExtResource("1_ao1mr")
+display_text = "E to Interact"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=856519788]
+shape = SubResource("SphereShape3D_02sbt")
+debug_color = Color(0.9969619, 0, 0.1854727, 0.41960785)
