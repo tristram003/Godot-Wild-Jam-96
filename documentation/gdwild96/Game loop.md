@@ -13,7 +13,7 @@
 ### Make Potions
 
 - Cook with mortar and pestle, stovetop, cauldron, cutting 
-	- Use area 2D, trigger animation, cook for set timer 
+	- Use area 3D, trigger animation, cook for set timer 
 	- Each instrument will have a minigame attached to it 
 		- mortar controlled by mouse
 		- same for cauldron with a spoon 
@@ -24,5 +24,5 @@
 
 ### Sell Potions
 
-- Three different merchants come in and buy different potions 
+- Three different merchants come in and buy different [[potions]] 
 

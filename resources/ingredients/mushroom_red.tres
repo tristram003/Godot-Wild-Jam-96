@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Ingredient" format=3 uid="uid://bq4iq3xm78kny"]
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bq4iq3xm78kny"]
 
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="1_g27m1"]
 [ext_resource type="PackedScene" uid="uid://dt2rc1dn5m06w" path="res://assets/ZachModels/mushroom_example.blend" id="1_sru4w"]
@@ -7,4 +7,10 @@
 script = ExtResource("1_g27m1")
 name = &"Red Mushroom"
 mesh = ExtResource("1_sru4w")
+cook_time = 10.0
+cooked_tint = Color(0.5568628, 0.27058825, 0.08235294, 0.8862745)
+burn_time = 10.0
+expire_time = 60.0
+expired_tint = Color(0, 0.7490196, 0, 0.5921569)
+crush_color = Color(0.8509804, 0, 0, 1)
 metadata/_custom_type_script = "uid://motxcejic07p"
