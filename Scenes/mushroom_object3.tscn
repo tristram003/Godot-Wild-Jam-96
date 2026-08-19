@@ -1,29 +1,22 @@
 [gd_scene format=3 uid="uid://x37mxee570px"]
 
-[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scenes/object_interact.gd" id="1_nos23"]
-[ext_resource type="PackedScene" uid="uid://dyebyu0cb5ugd" path="res://PotionTesting.glb" id="2_t2o06"]
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_nos23"]
+[ext_resource type="PackedScene" uid="uid://bh0i71f0v5q2v" path="res://assets/TristanModels/purple_mushroom.blend" id="2_qtplb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
-radius = 0.10573022
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
-size = Vector3(0.06439209, 0.069885254, 0.06814957)
+size = Vector3(1.9203148, 4.5950813, 1.9167829)
 
-[node name="PotionTesting" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+[node name="PurpleMushroom" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_nos23")
 
-[node name="PotionTesting" parent="." unique_id=1926438693 instance=ExtResource("2_t2o06")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1927482805]
-shape = SubResource("SphereShape3D_g4v7s")
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556141100]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010681152, 0.1312491, 0.0013484955)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.020365715, 1.0697609, -0.048151135)
 shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="Mushroom" parent="." unique_id=1419081016 instance=ExtResource("2_qtplb")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.014496461, -0.052170455, -0.013601661)

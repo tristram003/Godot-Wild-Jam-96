@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://db2gfp73s1bim"
-path="res://.godot/imported/skeleton_mage.glb-23884f323fdb6b179e1b24f2d5a6e19a.scn"
+uid="uid://bo2bl07k74arq"
+path="res://.godot/imported/purple_mushroom.glb-9d1fd493228337a6b210ef3ec2a49c4d.scn"
 
 [deps]
 
-source_file="res://assets/tavernprops/skeleton_mage.glb"
-dest_files=["res://.godot/imported/skeleton_mage.glb-23884f323fdb6b179e1b24f2d5a6e19a.scn"]
+source_file="res://assets/TristanModels/purple_mushroom.glb"
+dest_files=["res://.godot/imported/purple_mushroom.glb-9d1fd493228337a6b210ef3ec2a49c4d.scn"]
 
 [params]
 
