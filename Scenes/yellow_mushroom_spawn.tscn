@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://dt7l37eb4tvjo"]
+[gd_scene format=3 uid="uid://d17bsyvg5riro"]
 
-[ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scripts/mushroom_spawn.gd" id="1_8oth2"]
-[ext_resource type="PackedScene" uid="uid://bo2bl07k74arq" path="res://assets/TristanModels/purple_mushroom.glb" id="2_8oth2"]
+[ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scripts/mushroom_spawn.gd" id="1_6h7u3"]
+[ext_resource type="PackedScene" uid="uid://bmot0vki5qjf7" path="res://Scenes/mushroom_object2.tscn" id="2_6h7u3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
 radius = 10.0
 
-[node name="MushroomSpawn" type="Node3D" unique_id=911568623]
-script = ExtResource("1_8oth2")
+[node name="YellowMushroomSpawn" type="Node3D" unique_id=911568623]
+script = ExtResource("1_6h7u3")
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
-wait_time = 5.0
+wait_time = 60.0
 autostart = true
 
 [node name="SpawnArea" type="Area3D" parent="." unique_id=2126496167]
@@ -20,7 +20,7 @@ shape = SubResource("SphereShape3D_yf5fn")
 
 [node name="Marker3D" type="Marker3D" parent="SpawnArea" unique_id=1714474126]
 
-[node name="Mushroom" parent="." unique_id=549288920 instance=ExtResource("2_8oth2")]
+[node name="Mushroom" parent="." unique_id=1280477423 instance=ExtResource("2_6h7u3")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

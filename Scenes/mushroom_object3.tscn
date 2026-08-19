@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://x37mxee570px"]
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_nos23"]
-[ext_resource type="PackedScene" uid="uid://bh0i71f0v5q2v" path="res://assets/TristanModels/purple_mushroom.blend" id="2_qtplb"]
+[ext_resource type="PackedScene" uid="uid://bo2bl07k74arq" path="res://assets/TristanModels/purple_mushroom.glb" id="2_qtplb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -18,5 +18,5 @@ script = ExtResource("1_nos23")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.020365715, 1.0697609, -0.048151135)
 shape = SubResource("BoxShape3D_g4v7s")
 
-[node name="Mushroom" parent="." unique_id=1419081016 instance=ExtResource("2_qtplb")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.014496461, -0.052170455, -0.013601661)
+[node name="purple_mushroom" parent="." unique_id=549288920 instance=ExtResource("2_qtplb")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)

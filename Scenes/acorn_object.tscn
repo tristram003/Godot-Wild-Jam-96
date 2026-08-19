@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://l7kp5hnq3wbq"]
+
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_71fxs"]
+[ext_resource type="PackedScene" uid="uid://bv4n3qjtpxufq" path="res://assets/TristanModels/acorn.glb" id="2_71fxs"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yq1aw"]
+radius = 1.182121
+
+[node name="Acorn" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+collision_layer = 2
+mass = 0.15
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_71fxs")
+
+[node name="Head" type="CollisionShape3D" parent="." unique_id=1927482805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, 0.13087529, -0.006958008)
+shape = SubResource("SphereShape3D_yq1aw")
+
+[node name="acorn" parent="." unique_id=349823043 instance=ExtResource("2_71fxs")]

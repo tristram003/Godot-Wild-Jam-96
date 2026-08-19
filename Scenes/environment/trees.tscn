@@ -16,9 +16,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.31649, 0, -15.628044)
 [node name="pinetree14" parent="." unique_id=656318268 instance=ExtResource("1_bdh2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.691391, 0, -5.1326017)
 
-[node name="pinetree13" parent="." unique_id=1897363927 instance=ExtResource("1_bdh2f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.761833, 0, -17.680962)
-
 [node name="pinetree12" parent="." unique_id=1758791539 instance=ExtResource("1_bdh2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.564402, 0, -17.121109)
 

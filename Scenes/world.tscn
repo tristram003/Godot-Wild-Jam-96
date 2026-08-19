@@ -15,10 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://assets/tavernprops/storage.glb" id="14_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bnurjkh3ycsy6" path="res://Cooking Minigames/mortar_pestle.tscn" id="14_axeuq"]
 [ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potion_testing.tscn" id="14_e0ngr"]
-[ext_resource type="PackedScene" uid="uid://brybogk8ipscr" path="res://Scenes/mushroom_spawn1.tscn" id="15_kn0ld"]
-[ext_resource type="PackedScene" uid="uid://d17bsyvg5riro" path="res://Scenes/mushroom_spawn2.tscn" id="16_hgpy0"]
-[ext_resource type="PackedScene" uid="uid://dt7l37eb4tvjo" path="res://Scenes/mushroom_spawn3.tscn" id="17_t2t4p"]
+[ext_resource type="PackedScene" uid="uid://brybogk8ipscr" path="res://Scenes/red_mushroom_spawn.tscn" id="15_kn0ld"]
+[ext_resource type="PackedScene" uid="uid://d17bsyvg5riro" path="res://Scenes/yellow_mushroom_spawn.tscn" id="16_hgpy0"]
+[ext_resource type="PackedScene" uid="uid://dt7l37eb4tvjo" path="res://Scenes/purple_mushroom_spawn.tscn" id="17_t2t4p"]
+[ext_resource type="PackedScene" uid="uid://bymkao2ymxix0" path="res://Scenes/green_apple_spawn.tscn" id="18_1cojt"]
 [ext_resource type="PackedScene" uid="uid://b7mes8ngg4v15" path="res://Scenes/customer_spawn.tscn" id="19_axeuq"]
+[ext_resource type="PackedScene" uid="uid://c4j1p66y3kv0r" path="res://Scenes/red_apple_spawn.tscn" id="19_pyn1s"]
+[ext_resource type="PackedScene" uid="uid://cksyy1luv2j24" path="res://Scenes/acorn_spawn.tscn" id="21_yq1aw"]
 
 [sub_resource type="Environment" id="Environment_5v1tr"]
 background_mode = 1
@@ -94,7 +97,7 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="tavern" parent="." unique_id=80751599 instance=ExtResource("2_go701")]
-transform = Transform3D(0.8061968, 0, -0.5916474, 0, 1, 0, 0.5916474, 0, 0.8061968, 5.744193, 0.008583084, -8.113627)
+transform = Transform3D(0.8061968, 0, -0.5916474, 0, 1, 0, 0.5916474, 0, 0.8061968, 17.823732, 0.008583084, -18.91079)
 
 [node name="crate" parent="tavern" unique_id=1967034707 instance=ExtResource("11_kn0ld")]
 transform = Transform3D(0.97866714, 0, -0.20545274, 0, 1, 0, 0.20545274, 0, 0.97866714, -2.9117396, 0.019627795, -1.8550854)
@@ -120,14 +123,24 @@ physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 [node name="MortarPestle" parent="." unique_id=993208658 instance=ExtResource("14_axeuq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8897228, 1.1757362, -10.009408)
 
-[node name="MushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2136636, 0, 0)
+[node name="RedMushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0, -14.710561)
 
-[node name="MushroomSpawn2" parent="." unique_id=1112184208 instance=ExtResource("16_hgpy0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0744896, 0, 6.6466603)
+[node name="YellowMushroomSpawn" parent="." unique_id=1112184208 instance=ExtResource("16_hgpy0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.637573, 0, 14.499481)
 
-[node name="MushroomSpawn3" parent="." unique_id=1405417547 instance=ExtResource("17_t2t4p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.319828, 0, 3.2493968)
+[node name="PurpleMushroomSpawn" parent="." unique_id=1405417547 instance=ExtResource("17_t2t4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.07337, 0, 13.122822)
+spawn_count = 3
+
+[node name="GreenAppleSpawn4" parent="." unique_id=1793696556 instance=ExtResource("18_1cojt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914423, 0.36068177, 0)
+
+[node name="RedAppleSpawn" parent="." unique_id=1349560068 instance=ExtResource("19_pyn1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.224415, 0.86650515, 17.257158)
+
+[node name="AcornSpawn" parent="." unique_id=1350357925 instance=ExtResource("21_yq1aw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.494583, 0.57271266, 0)
 
 [node name="skeleton_customer" parent="." unique_id=1280477423 instance=ExtResource("1_0pcbe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.222072)
