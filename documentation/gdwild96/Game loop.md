@@ -4,10 +4,16 @@
 	- Tristan
 	- Place items at certain places in forest each day 
 
-- Three types of mushrooms
-- Three types of herbs
+- Three types of ingredients 
 - No inventory system, all ingredients are hard objects throughout the world you carry around 
 	- Tristan 
+
+	TO DO
+		Model three types of mushrooms
+		Model 4 types of potions with 5 color variation each
+		Create NPC spawn and interaction with dialogue that make potions disappear and ticks up some kind of score
+		Redo the model for the house to be more shop like and place the minigames around 
+		
 
 
 ### Make Potions
