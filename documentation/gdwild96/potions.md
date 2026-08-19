@@ -11,3 +11,5 @@ if choosing 3 ingredients, there are 20 possible potion combinations
 - Big Potion
 - Flunitrazepam Potion
 - Potion of Insulin Resistance
+- Potion of Forgetfulness
+- 
