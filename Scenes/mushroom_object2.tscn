@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bmot0vki5qjf7"]
+
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scenes/object_interact.gd" id="1_234li"]
+[ext_resource type="PackedScene" uid="uid://dunt0o6phd1n8" path="res://tavernprops/door.glb" id="2_234li"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+size = Vector3(1.5357666, 2.1993408, 0.32356262)
+
+[node name="MushroomObject2" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+collision_layer = 2
+mass = 0.15
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_234li")
+
+[node name="PLACEHOLDERdoor" parent="." unique_id=336491968 instance=ExtResource("2_234li")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1864226186]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0040740967, 0.25938416, 0.0074596405)
+shape = SubResource("BoxShape3D_yf5fn")
