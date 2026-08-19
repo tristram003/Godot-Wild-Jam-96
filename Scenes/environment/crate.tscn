@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b07npqaoly1i1"]
+
+[ext_resource type="PackedScene" uid="uid://cqu4wjcboc0ye" path="res://assets/tavernprops/crate.glb" id="1_wp72f"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wuc20"]
+data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1)
+
+[node name="crate" unique_id=907967362 instance=ExtResource("1_wp72f")]
+
+[node name="Crate" parent="." index="0" unique_id=402093353]
+layers = 7
+
+[node name="Cube" parent="." index="1" unique_id=399482781]
+layers = 7
+
+[node name="StaticBody3D" parent="Cube" index="0" unique_id=1297451130]
+collision_layer = 7
+collision_mask = 7
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=122899711]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=789252122]
+shape = SubResource("ConcavePolygonShape3D_wuc20")
