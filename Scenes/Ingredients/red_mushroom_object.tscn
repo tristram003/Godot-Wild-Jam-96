@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d30yjnqrw7ax1"]
 
-[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scenes/object_interact.gd" id="1_bs2yt"]
-[ext_resource type="PackedScene" uid="uid://dt2rc1dn5m06w" path="res://assets/mushroom_example.blend" id="2_bgaf1"]
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_bs2yt"]
+[ext_resource type="PackedScene" uid="uid://dt2rc1dn5m06w" path="res://assets/ZachModels/mushroom_example.blend" id="2_bgaf1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -14,7 +14,7 @@ height = 0.17605591
 radius = 0.034179688
 
 [node name="Mushroom1" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")

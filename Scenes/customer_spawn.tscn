@@ -3,10 +3,18 @@
 [ext_resource type="Script" uid="uid://drudd7fire6ck" path="res://Scenes/customer_spawn.gd" id="1_lih2t"]
 [ext_resource type="PackedScene" uid="uid://cqi2om6t11noi" path="res://Scenes/skeleton_customer.tscn" id="2_lih2t"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1.8519897, 2.5705566, 1.7365723)
+
 [node name="customer_spawn" type="Node3D" unique_id=911568623]
 script = ExtResource("1_lih2t")
+object_to_spawn = ExtResource("2_lih2t")
 
-[node name="PotionTesting" parent="." unique_id=1280477423 instance=ExtResource("2_lih2t")]
+[node name="skeleton_customer" parent="." unique_id=1280477423 instance=ExtResource("2_lih2t")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="skeleton_customer" unique_id=1258780808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0022888184, 1.2923584, 0.027709961)
+shape = SubResource("BoxShape3D_g4v7s")
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
 wait_time = 15.0
@@ -15,7 +23,5 @@ autostart = true
 [node name="SpawnArea" type="Area3D" parent="." unique_id=2126496167]
 
 [node name="Marker3D" type="Marker3D" parent="SpawnArea" unique_id=1714474126]
-
-[node name="skeleton_customer" parent="." unique_id=736038621 instance=ExtResource("2_lih2t")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -8,6 +8,7 @@ radius = 10.0
 
 [node name="RedMushroomSpawn" type="Node3D" unique_id=911568623]
 script = ExtResource("1_cgvex")
+object_to_spawn = ExtResource("2_cgvex")
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
 wait_time = 60.0

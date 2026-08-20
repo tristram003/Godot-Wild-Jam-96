@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dt7l37eb4tvjo"]
 
 [ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scripts/mushroom_spawn.gd" id="1_8oth2"]
-[ext_resource type="PackedScene" uid="uid://x37mxee570px" path="res://Scenes/Ingredients/puple_mushroom_spawn.tscn" id="2_8oth2"]
+[ext_resource type="PackedScene" uid="uid://x37mxee570px" path="res://Scenes/Ingredients/puple_mushroom_object.tscn" id="2_8oth2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
 radius = 10.0
@@ -9,6 +9,7 @@ radius = 10.0
 [node name="PurpleMushroomSpawn" type="Node3D" unique_id=911568623]
 script = ExtResource("1_8oth2")
 spawn_count = null
+object_to_spawn = ExtResource("2_8oth2")
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
 wait_time = 60.0

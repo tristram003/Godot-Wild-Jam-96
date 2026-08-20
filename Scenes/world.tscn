@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cupyda85lb3cw"]
 
-[ext_resource type="PackedScene" uid="uid://cqi2om6t11noi" path="res://Scenes/skeleton_customer.tscn" id="1_0pcbe"]
 [ext_resource type="ArrayMesh" uid="uid://cdvcs856yfyvc" path="res://assets/Sprites/grass2.res" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://bo8wu37hrljva" path="res://Player/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://ykscxcyglvd5" path="res://assets/tavern.glb" id="2_go701"]
@@ -63,6 +62,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0127156, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1691639493]
 environment = SubResource("Environment_5v1tr")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1968460299]
+transform = Transform3D(0.25727662, -0.9194678, -0.2973006, -0.5964928, -0.39315602, 0.69973195, -0.76026654, -0.0026869725, -0.6496058, 0.1519947, 30.318943, 6.9893694)
+light_energy = 2.0
+shadow_enabled = true
+sky_mode = 1
+
 [node name="Cliff 1" parent="." unique_id=1262419331 instance=ExtResource("4_e0ngr")]
 
 [node name="Cliff 2" parent="Cliff 1" unique_id=1293147829 instance=ExtResource("5_kn0ld")]
@@ -89,12 +94,6 @@ mesh = SubResource("QuadMesh_go701")
 [node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="Floor" unique_id=1173485928]
 material_override = SubResource("StandardMaterial3D_5v1tr")
 multimesh = SubResource("MultiMesh_5v1tr")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1968460299]
-transform = Transform3D(0.25727662, -0.9194679, -0.29730064, -0.5964928, -0.39315608, 0.699732, -0.76026654, -0.0026869737, -0.6496059, 0.1519947, 30.318943, 6.9893694)
-light_energy = 2.0
-shadow_enabled = true
-sky_mode = 1
 
 [node name="tavern" parent="." unique_id=80751599 instance=ExtResource("2_go701")]
 transform = Transform3D(0.8061968, 0, -0.5916474, 0, 1, 0, 0.5916474, 0, 0.8061968, 17.823732, 0.008583084, -18.91079)
@@ -124,27 +123,24 @@ physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.027344, 1.1757362, -21.091032)
 
 [node name="RedMushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0, -14.710561)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0, -12.542904)
 
 [node name="YellowMushroomSpawn" parent="." unique_id=1112184208 instance=ExtResource("16_hgpy0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.637573, 0, 14.499481)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.997149, 0, 14.458361)
 
 [node name="PurpleMushroomSpawn" parent="." unique_id=1405417547 instance=ExtResource("17_t2t4p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.07337, 0, 13.122822)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8592434, 0, -3.4861326)
 spawn_count = 3
 
 [node name="GreenAppleSpawn4" parent="." unique_id=1793696556 instance=ExtResource("18_1cojt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914423, 0.36068177, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.592869, 0.36068177, 12.091475)
 
 [node name="RedAppleSpawn" parent="." unique_id=1349560068 instance=ExtResource("19_pyn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.224415, 0.86650515, 17.257158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0317802, 0.86650515, 15.663725)
 
 [node name="AcornSpawn" parent="." unique_id=1350357925 instance=ExtResource("21_yq1aw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.494583, 0.57271266, 0)
-
-[node name="skeleton_customer" parent="." unique_id=1280477423 instance=ExtResource("1_0pcbe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.222072)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.660015, 0.65047526, -0.35641003)
 
 [node name="customer_spawn" parent="." unique_id=1672295252 instance=ExtResource("19_axeuq")]
-transform = Transform3D(0.9999619, 0, 0.008726535, 0, 1, 0, -0.008726535, 0, 0.9999619, -6.329039, 0, 0)
+transform = Transform3D(0.9999619, 0, 0.008726535, 0, 1, 0, -0.008726535, 0, 0.9999619, 9.635474, 0.25, -20.023785)
 visible = false
