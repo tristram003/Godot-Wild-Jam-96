@@ -2,14 +2,17 @@ extends Node3D
 
 # Spawn count determines how many mushrooms spawn at timers end
 @export var spawn_count: int = 3
+@export var object_to_spawn: PackedScene
 
 @onready var spawn_area: Area3D = $SpawnArea
 @onready var collision_shape: CollisionShape3D = $SpawnArea/CollisionShape3D
 @onready var timer: Timer = $Timer
+@onready var marker: Marker3D = $SpawnArea/Marker3D
+
 
 # Mushroom is different objects changed in out scene
 # Might be a better way to architect that
-@onready var object = $Mushroom
+#@onready var object = $Mushroom
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +28,9 @@ func _on_timer_timeout() -> void:
 		spawn_object()
 
 func spawn_object() -> void:
+	if object_to_spawn == null:
+		return
+		
 	var shape = collision_shape.shape
 	if shape is SphereShape3D:
 		# Use raduis instead of shape for sphere geometry
@@ -39,12 +45,15 @@ func spawn_object() -> void:
 			random_z
 		)
 
-		# Duplicates object in scene into random locations
-		var object_spawn = object.duplicate()
-		get_tree().current_scene.add_child(object_spawn)
-		object_spawn.global_position = spawn_position
+		var object = object_to_spawn.instantiate()
+		get_tree().current_scene.add_child(object)
+		object.global_position = spawn_position
 
-		## leftover but keep around just in case
-		#var object_spawn = object_scene.instantiate()
+
+		### LEFTOVER CODE, LEAVE FOR REFERENCE
+		# Duplicates object in scene into random locations
+		#var object_spawn = object.duplicate()
 		#get_tree().current_scene.add_child(object_spawn)
 		#object_spawn.global_position = spawn_position
+	
+	#var spawn_position = marker.global_position 

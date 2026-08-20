@@ -20,7 +20,7 @@ metadata/_custom_type_script = "uid://motxcejic07p"
 size = Vector3(6.28067, 9.476746, 6.1378975)
 
 [node name="OrangeMushroom" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")

@@ -10,7 +10,6 @@
 radius = 0.26263338
 
 [node name="green_apple" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")

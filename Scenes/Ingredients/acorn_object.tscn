@@ -10,6 +10,7 @@
 radius = 1.182121
 
 [node name="Acorn" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")

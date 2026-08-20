@@ -8,6 +8,7 @@ radius = 10.0
 
 [node name="AcornSpawn" type="Node3D" unique_id=911568623]
 script = ExtResource("1_4x47w")
+object_to_spawn = ExtResource("2_4x47w")
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
 wait_time = 60.0
@@ -21,6 +22,5 @@ shape = SubResource("SphereShape3D_yf5fn")
 [node name="Marker3D" type="Marker3D" parent="SpawnArea" unique_id=1714474126]
 
 [node name="Mushroom" parent="." unique_id=1280477423 instance=ExtResource("2_4x47w")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
