@@ -123,7 +123,7 @@ physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.027344, 1.1757362, -21.091032)
 
 [node name="RedMushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0, -12.542904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0.019077487, -12.542904)
 
 [node name="YellowMushroomSpawn" parent="." unique_id=1112184208 instance=ExtResource("16_hgpy0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.997149, 0, 14.458361)

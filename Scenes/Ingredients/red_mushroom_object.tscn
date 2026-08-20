@@ -1,32 +1,27 @@
 [gd_scene format=3 uid="uid://d30yjnqrw7ax1"]
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_bs2yt"]
-[ext_resource type="PackedScene" uid="uid://dt2rc1dn5m06w" path="res://assets/ZachModels/mushroom_example.blend" id="2_bgaf1"]
+[ext_resource type="Resource" uid="uid://bq4iq3xm78kny" path="res://resources/ingredients/mushroom_red.tres" id="2_2g40i"]
+[ext_resource type="ArrayMesh" uid="uid://bgeklj1ptmaod" path="res://assets/ingredient_meshes/red_mushroom.tres" id="4_2qers"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_t2o06"]
-height = 0.081329346
-radius = 0.09765625
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
+height = 0.4575348
+radius = 0.1694336
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_wu4ky"]
-height = 0.17605591
-radius = 0.034179688
-
-[node name="Mushroom1" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+[node name="Mushroom1" type="RigidBody3D" unique_id=1280477423 node_paths=PackedStringArray("item_mesh") groups=["interactable", "pickable"]]
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_bs2yt")
+item_mesh = NodePath("MeshInstance3D")
+ingredient_data = ExtResource("2_2g40i")
 
-[node name="Head" type="CollisionShape3D" parent="." unique_id=1927482805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, 0.18717653, -0.006958008)
-shape = SubResource("CylinderShape3D_t2o06")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1013916619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2208023, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
 
-[node name="Stalk" type="CollisionShape3D" parent="." unique_id=556141100]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00852792, 0.06246245, 0.0013484955)
-shape = SubResource("CylinderShape3D_wu4ky")
-
-[node name="mushroom_example" parent="." unique_id=926240613 instance=ExtResource("2_bgaf1")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.012583524, 0, -0.0023676306)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1788455941]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = ExtResource("4_2qers")

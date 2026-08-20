@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://djgw0ct0ielwq"]
 
-[ext_resource type="PackedScene" uid="uid://fawsedobuwpf" path="res://assets/TristanModels/Green_Apple.glb" id="1_8dndi"]
+[ext_resource type="ArrayMesh" uid="uid://dnkx4gmh5iw6j" path="res://assets/ingredient_meshes/green_apple.tres" id="1_8dndi"]
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_pkv7c"]
 
 [resource]

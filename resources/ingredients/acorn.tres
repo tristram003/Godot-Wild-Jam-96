@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bcpv0gnsbluox"]
 
-[ext_resource type="PackedScene" uid="uid://bv4n3qjtpxufq" path="res://assets/TristanModels/acorn.glb" id="1_l0pin"]
+[ext_resource type="ArrayMesh" uid="uid://bcyqxxscyg5jm" path="res://assets/ingredient_meshes/acorn.tres" id="1_l0pin"]
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_jkmv1"]
 
 [resource]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bq4iq3xm78kny"]
 
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="1_g27m1"]
-[ext_resource type="PackedScene" uid="uid://dt2rc1dn5m06w" path="res://assets/ZachModels/mushroom_example.blend" id="1_sru4w"]
+[ext_resource type="ArrayMesh" uid="uid://bgeklj1ptmaod" path="res://assets/ingredient_meshes/red_mushroom.tres" id="1_sru4w"]
 
 [resource]
 script = ExtResource("1_g27m1")

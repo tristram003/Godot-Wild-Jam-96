@@ -4,7 +4,7 @@ class_name IngredientResource
 enum State {FRESH, EXPIRED, COOKED, BURNT}
 
 @export var name: StringName
-@export var mesh: PackedScene
+@export var mesh: Mesh
 @export var cook_time: float
 @export var cooked_tint: Color
 @export var burn_time: float

@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://l7kp5hnq3wbq"]
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_71fxs"]
-[ext_resource type="PackedScene" uid="uid://bv4n3qjtpxufq" path="res://assets/TristanModels/acorn.glb" id="2_71fxs"]
 [ext_resource type="Resource" uid="uid://bcpv0gnsbluox" path="res://resources/ingredients/acorn.tres" id="2_li3ki"]
+[ext_resource type="ArrayMesh" uid="uid://bcyqxxscyg5jm" path="res://assets/ingredient_meshes/acorn.tres" id="4_o3ci5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yq1aw"]
-radius = 1.182121
+radius = 0.05479908
 
-[node name="Acorn" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+[node name="Acorn" type="RigidBody3D" unique_id=1280477423 node_paths=PackedStringArray("item_mesh") groups=["interactable", "pickable"]]
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_71fxs")
+item_mesh = NodePath("MeshInstance3D")
 ingredient_data = ExtResource("2_li3ki")
 
-[node name="Head" type="CollisionShape3D" parent="." unique_id=1927482805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, 0.13087529, -0.006958008)
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1927482805]
 shape = SubResource("SphereShape3D_yq1aw")
 
-[node name="acorn" parent="." unique_id=349823043 instance=ExtResource("2_71fxs")]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1248876052]
+transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0)
+mesh = ExtResource("4_o3ci5")
