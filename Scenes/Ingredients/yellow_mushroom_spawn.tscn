@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bmot0vki5qjf7"]
+
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_234li"]
+[ext_resource type="PackedScene" uid="uid://brhtlttxxyt8c" path="res://assets/TristanModels/orangemushroom.glb" id="2_pmyb8"]
+[ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="3_e3spn"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="Resource" id="Resource_epma5"]
+script = ExtResource("3_e3spn")
+mesh = ExtResource("2_pmyb8")
+cook_time = 10.0
+cooked_tint = Color(0.57254905, 0.36862746, 0, 0.8)
+burn_time = 10.0
+expire_time = 60.0
+expired_tint = Color(0, 0.49019608, 0, 0.8627451)
+metadata/_custom_type_script = "uid://motxcejic07p"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+size = Vector3(6.28067, 9.476746, 6.1378975)
+
+[node name="OrangeMushroom" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+collision_layer = 2
+mass = 0.15
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_234li")
+ingredient_data = SubResource("Resource_epma5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1864226186]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.026340485, 1.1690598, 0.012856007)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Mushroom" parent="." unique_id=2078537415 instance=ExtResource("2_pmyb8")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.021828502, 0, 0.0015262365)

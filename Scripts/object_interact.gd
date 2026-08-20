@@ -1,7 +1,9 @@
 extends RigidBody3D
 
 @export var display_text: String
- 
+@export var ingredient_data: IngredientResource
+
+
 func interact():
 	print("Hello!")
 

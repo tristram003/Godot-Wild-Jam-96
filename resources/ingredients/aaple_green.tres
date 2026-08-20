@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://djgw0ct0ielwq"]
+
+[ext_resource type="PackedScene" uid="uid://fawsedobuwpf" path="res://assets/TristanModels/Green_Apple.glb" id="1_8dndi"]
+[ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_pkv7c"]
+
+[resource]
+script = ExtResource("2_pkv7c")
+name = &"Green Apple"
+mesh = ExtResource("1_8dndi")
+cook_time = 10.0
+cooked_tint = Color(0.33333334, 0.15686275, 0, 0.7411765)
+burn_time = 10.0
+expire_time = 60.0
+expired_tint = Color(0, 0.3254902, 0.32156864, 0.85490197)
+metadata/_custom_type_script = "uid://motxcejic07p"

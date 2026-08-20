@@ -9,7 +9,7 @@ script = ExtResource("1_lih2t")
 [node name="PotionTesting" parent="." unique_id=1280477423 instance=ExtResource("2_lih2t")]
 
 [node name="Timer" type="Timer" parent="." unique_id=1370848640]
-wait_time = 5.0
+wait_time = 15.0
 autostart = true
 
 [node name="SpawnArea" type="Area3D" parent="." unique_id=2126496167]
