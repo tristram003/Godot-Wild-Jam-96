@@ -16,7 +16,6 @@ var hp = 50
 var toggle_on = false
 var held_target = null
 
-
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
 @onready var cooldown = $AttackCooldown

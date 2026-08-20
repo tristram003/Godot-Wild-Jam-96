@@ -1,5 +1,8 @@
 extends Node3D
 class_name MortarPestleMinigame
+## this is a minigame where you crush shit into crumbles
+
+var ingredient: IngredientResource
 
 @onready var pestle_controller: CharacterBody3D = $PestleController
 @onready var minigame_camera: Camera3D = $Camera3D
@@ -8,6 +11,7 @@ class_name MortarPestleMinigame
 func _ready() -> void:
 	minigame_camera.current = false
 
+## This runs when the minigame starts and disables the player via the gamemaster script
 func minigame_start():
 	print("started")
 	show()
