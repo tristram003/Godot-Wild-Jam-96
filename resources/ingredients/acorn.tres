@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://bcpv0gnsbluox"]
+
+[ext_resource type="PackedScene" uid="uid://bv4n3qjtpxufq" path="res://assets/TristanModels/acorn.glb" id="1_l0pin"]
+[ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_jkmv1"]
+
+[resource]
+script = ExtResource("2_jkmv1")
+name = &"acorn"
+mesh = ExtResource("1_l0pin")
+cook_time = 5.0
+cooked_tint = Color(0.91764706, 0.22745098, 0, 0.7647059)
+burn_time = 10.0
+expire_time = 30.0
+expired_tint = Color(0, 0.5921569, 0, 0.84313726)
+metadata/_custom_type_script = "uid://motxcejic07p"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_j7pke"]
 [ext_resource type="PackedScene" uid="uid://n5jogx4gs0tm" path="res://assets/TristanModels/Red_Apple.glb" id="2_j7pke"]
+[ext_resource type="Resource" uid="uid://b3lx0x788au86" path="res://resources/ingredients/apple_red.tres" id="2_te4y7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -14,6 +15,7 @@ collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_j7pke")
+ingredient_data = ExtResource("2_te4y7")
 
 [node name="Head" type="CollisionShape3D" parent="." unique_id=1927482805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015472412, -0.0024982095, -0.006958008)

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bsigc8e5j886e"]
+
+[ext_resource type="Script" uid="uid://d0aq6wa2tg3rv" path="res://BuyPotions.gd" id="1_a202f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(14.701813, 3.2294922, 11.103027)
+
+[node name="SellPotionsCheck" type="Node3D" unique_id=1237108358]
+script = ExtResource("1_a202f")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=150816713]
+
+[node name="ShopArea" type="CollisionShape3D" parent="Area3D" unique_id=955629894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94569397, 1.0913086, -1.1442871)
+shape = SubResource("BoxShape3D_g4v7s")

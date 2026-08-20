@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://x37mxee570px"]
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_nos23"]
+[ext_resource type="Resource" uid="uid://c2s1ah5y7384p" path="res://resources/ingredients/mushroom_purple.tres" id="2_ll2s3"]
 [ext_resource type="PackedScene" uid="uid://bo2bl07k74arq" path="res://assets/TristanModels/purple_mushroom.glb" id="2_qtplb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
@@ -9,10 +10,12 @@
 size = Vector3(1.9203148, 4.5950813, 1.9167829)
 
 [node name="PurpleMushroom" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_nos23")
+ingredient_data = ExtResource("2_ll2s3")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556141100]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.020365715, 1.0697609, -0.048151135)

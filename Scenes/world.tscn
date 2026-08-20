@@ -121,7 +121,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.9820786, 0.51901793, -2.788
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 
 [node name="MortarPestle" parent="." unique_id=993208658 instance=ExtResource("14_axeuq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8897228, 1.1757362, -10.009408)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.027344, 1.1757362, -21.091032)
 
 [node name="RedMushroomSpawn" parent="." unique_id=911568623 instance=ExtResource("15_kn0ld")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.983324, 0, -14.710561)

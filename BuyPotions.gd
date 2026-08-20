@@ -1,11 +1,5 @@
-extends RigidBody3D
+extends Node3D
 
-@export var display_text: String
-@export var ingredient_data: IngredientResource
-
-
-func interact():
-	print("Hello!")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
