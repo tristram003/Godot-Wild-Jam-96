@@ -3,9 +3,10 @@ extends Node3D
 # Spawn count determines how many mushrooms spawn at timers end
 @export var spawn_count: int = 1
 @export var object_to_spawn: PackedScene
-
 @onready var timer: Timer = $Timer
 @onready var marker: Marker3D = $SpawnArea/Marker3D
+
+
 #@onready var object: RigidBody3D = $skeleton_customer
 # @onready var object: CharacterBody3D = $skeleton_customer
 

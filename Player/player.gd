@@ -26,6 +26,8 @@ var held_target = null
 @onready var interact_text: Label = $HUD/BoxContainer/Interact
 @onready var goldLabel = $HUD/GoldLabel
 
+
+
 func _enter_tree() -> void:
 	Gamemaster.player = self
 
@@ -51,7 +53,7 @@ func update_HUD():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and see_cast.is_colliding():
 		var target = see_cast.get_collider()
-		if target.is_in_group("interactable") and target is Interactable:
+		if target.is_in_group("interactable"):  # and target is Interactable:
 			target.interact()
 
 		# Quits out the game
@@ -79,6 +81,12 @@ func _process(_delta):
 	# Handles UI
 	if see_cast.is_colliding():
 		var target = see_cast.get_collider()
+		if target.is_in_group("pickable"):
+			interact_text.text = target.display_text
+			interact_text.show()
+		else:
+			interact_text.hide()
+		
 		if target.is_in_group("interactable"):
 			interact_text.text = target.display_text
 			interact_text.show()

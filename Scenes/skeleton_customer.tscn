@@ -1,21 +1,26 @@
 [gd_scene format=3 uid="uid://cqi2om6t11noi"]
 
 [ext_resource type="Script" uid="uid://c46gphgciws1o" path="res://Scenes/customer.gd" id="1_y41tr"]
-[ext_resource type="PackedScene" uid="uid://db2gfp73s1bim" path="res://tavernprops/skeleton_mage.glb" id="2_y41tr"]
+[ext_resource type="PackedScene" uid="uid://db2gfp73s1bim" path="res://assets/tavernprops/skeleton_mage.glb" id="2_y41tr"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jjm4t"]
+radius = 0.7470703
+height = 2.7060547
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
-size = Vector3(1.7134972, 2.6022682, 1.2773523)
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+radius = 8.01187
 
-[node name="skeleton_customer" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+[node name="skeleton_customer" type="CharacterBody3D" unique_id=1972753738 groups=["interactable"]]
 collision_layer = 2
-mass = 0.15
-physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_y41tr")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556141100]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.065877914, 1.2987509, -0.17431498)
-shape = SubResource("BoxShape3D_g4v7s")
+[node name="customer_collision" type="CollisionShape3D" parent="." unique_id=556141100 groups=["interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.065877914, 1.319747, -0.17431498)
+shape = SubResource("CapsuleShape3D_jjm4t")
 
 [node name="skeleton_mage" parent="." unique_id=145427795 instance=ExtResource("2_y41tr")]
+
+[node name="BuyArea" type="Area3D" parent="." unique_id=354018085]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BuyArea" unique_id=2120360794]
+shape = SubResource("SphereShape3D_g4v7s")

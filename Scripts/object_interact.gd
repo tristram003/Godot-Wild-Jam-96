@@ -1,11 +1,10 @@
 extends RigidBody3D
 
-@export var display_text: String
+#@export var display_text: String
 @export var ingredient_data: IngredientResource
+@export_multiline var display_text: String = "Click to Pickup"
+@onready var potion = $PotionTesting
 
-
-func interact():
-	print("Hello!")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
