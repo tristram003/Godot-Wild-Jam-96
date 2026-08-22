@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqi2om6t11noi"]
 
-[ext_resource type="Script" uid="uid://c46gphgciws1o" path="res://Scenes/customer.gd" id="1_y41tr"]
+[ext_resource type="Script" uid="uid://c46gphgciws1o" path="res://Scripts/customer.gd" id="1_y41tr"]
 [ext_resource type="PackedScene" uid="uid://db2gfp73s1bim" path="res://assets/tavernprops/skeleton_mage.glb" id="2_y41tr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jjm4t"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b7mes8ngg4v15"]
 
-[ext_resource type="Script" uid="uid://drudd7fire6ck" path="res://Scenes/customer_spawn.gd" id="1_lih2t"]
+[ext_resource type="Script" uid="uid://drudd7fire6ck" path="res://Scripts/customer_spawn.gd" id="1_lih2t"]
 [ext_resource type="PackedScene" uid="uid://cqi2om6t11noi" path="res://Scenes/skeleton_customer.tscn" id="2_lih2t"]
 
 [node name="customer_spawn" type="Node3D" unique_id=911568623]

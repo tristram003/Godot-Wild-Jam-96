@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://rvqv5ehfmokv"]
+
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_d8b74"]
+[ext_resource type="PackedScene" uid="uid://dyebyu0cb5ugd" path="res://assets/PotionTesting.glb" id="1_tbtvv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+radius = 0.10838592
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(0.0692749, 0.10205078, 0.08105469)
+
+[node name="PotionTesting" type="RigidBody3D" unique_id=1280477423 groups=["pickable", "potions"]]
+collision_layer = 2
+collision_mask = 3
+mass = 0.15
+physics_material_override = SubResource("PhysicsMaterial_g4v7s")
+script = ExtResource("1_d8b74")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1927482805]
+shape = SubResource("SphereShape3D_g4v7s")
+debug_color = Color(0, 0.6, 0.05882353, 0.6901961)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556141100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004547119, 0.12719727, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+debug_color = Color(0, 0.6, 0.05882353, 0.6901961)
+
+[node name="PotionTesting" parent="." unique_id=1926438693 instance=ExtResource("1_tbtvv")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)

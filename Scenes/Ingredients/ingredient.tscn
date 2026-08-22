@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://duslr0ndyoxl3"]
 
 [ext_resource type="Script" uid="uid://bpth17gydqlad" path="res://components/interact/interactable_component.gd" id="1_n0heg"]
-[ext_resource type="Script" uid="uid://6okp2ourlfck" path="res://Scenes/Ingredients/ingredient.gd" id="1_veccr"]
+[ext_resource type="Script" uid="uid://6okp2ourlfck" path="res://Scripts/ingredient.gd" id="1_veccr"]
 
 [node name="Ingredient" type="RigidBody3D" unique_id=1067017451]
 collision_layer = 2
