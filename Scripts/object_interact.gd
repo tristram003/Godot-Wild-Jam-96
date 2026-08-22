@@ -1,9 +1,19 @@
 extends RigidBody3D
+class_name Item
 
-#@export var display_text: String
-@export var ingredient_data: IngredientResource
-@export_multiline var display_text: String = "Click to Pickup"
+
+@export var display_text: String = "Click to pickup "
+@export var item_mesh: MeshInstance3D
+@export var ingredient_data: IngredientResource:
+	set(item):
+		if item:
+			ingredient_data = item
+			display_text += ingredient_data.name
 @onready var potion = $PotionTesting
+
+
+func interact():
+	pass
 
 
 # Called when the node enters the scene tree for the first time.
