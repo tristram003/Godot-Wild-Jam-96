@@ -1,8 +1,13 @@
 extends Node
+signal update_gold()
+
 
 var player: Player
 var is_in_minigame: bool = false
 var score
+var gold: int = 0
+
+
 
 
 

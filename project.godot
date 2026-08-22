@@ -20,6 +20,7 @@ boot_splash/minimum_display_time=1500
 [autoload]
 
 Gamemaster="*uid://dw5pprondbm1k"
+Gamedata="*uid://d4feq1oaiiasu"
 
 [display]
 
@@ -42,6 +43,7 @@ folder_colors={
 
 pickable=""
 interactable=""
+potions=""
 
 [input]
 

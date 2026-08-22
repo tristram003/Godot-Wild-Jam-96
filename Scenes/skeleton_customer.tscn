@@ -8,11 +8,12 @@ radius = 0.7470703
 height = 2.7060547
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
-radius = 8.01187
+radius = 2.6040485
 
 [node name="skeleton_customer" type="CharacterBody3D" unique_id=1972753738 groups=["interactable"]]
 collision_layer = 2
 script = ExtResource("1_y41tr")
+display_text = null
 
 [node name="customer_collision" type="CollisionShape3D" parent="." unique_id=556141100 groups=["interactable"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.065877914, 1.319747, -0.17431498)
@@ -21,6 +22,8 @@ shape = SubResource("CapsuleShape3D_jjm4t")
 [node name="skeleton_mage" parent="." unique_id=145427795 instance=ExtResource("2_y41tr")]
 
 [node name="BuyArea" type="Area3D" parent="." unique_id=354018085]
+collision_layer = 2
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BuyArea" unique_id=2120360794]
 shape = SubResource("SphereShape3D_g4v7s")

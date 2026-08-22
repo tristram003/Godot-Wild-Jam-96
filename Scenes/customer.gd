@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export_multiline var display_text: String = "TESTING"
 @onready var BuyArea: Area3D = $BuyArea
-@onready var potion = $PotionTesting
+var wanteditem: Item 
 
 # PSEUDOCODE
 #	on interact
@@ -27,17 +27,15 @@ func interact():
 	check_for_potion()
 	
 func check_for_potion():
-	if potion in BuyArea.get_overlapping_bodies():
-		print("potion in area")
-	else:
-		print("potion NOT IN AREA")
-
-
-#if body.has_method("get_item_type"):
-	#var item_type = body.get_tem_type()
-	#
-	#if item_type == 'PotionTesting':
-		#gold = gold + 10
-		#
-	#elif item_type == 'HealingPotion'
-		#gold = gold + 5
+	if BuyArea.has_overlapping_bodies():
+		var overlaps = BuyArea.get_overlapping_bodies()
+		for body in overlaps:
+			if body.is_in_group('potions'):
+				print(body.name)
+				body.queue_free()
+				Gamemaster.gold =+ 10
+				print(Gamemaster.gold)
+				Gamemaster.update_gold.emit()
+				#Gamemaster.score =+ 10
+				#print(Gamemaster.score)
+		print("object detected")

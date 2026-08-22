@@ -11,8 +11,6 @@ var game_state: GameState = GameState.ACTIVE :
 		game_state = val
 var sensivity = 0.003 
 var onCooldown = false
-var gold = 15
-var hp = 50
 var toggle_on = false
 var held_target = null
 
@@ -42,7 +40,6 @@ func _ready():
 
 
 func update_HUD():
-	goldLabel.text = str(gold)
 	if Gamemaster.is_in_minigame:
 		camera.current = false
 	elif !Gamemaster.is_in_minigame:
