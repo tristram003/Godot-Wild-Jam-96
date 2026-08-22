@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/PotionTesting.glb-10aa201d9447ed0381675887ecb
 
 nodes/root_type=""
 nodes/root_name=""
-nodes/root_script=null
 mesh_library/use_node_names_as_mesh_names=false
 array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
