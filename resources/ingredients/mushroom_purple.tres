@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://c2s1ah5y7384p"]
 
-[ext_resource type="PackedScene" uid="uid://bo2bl07k74arq" path="res://assets/TristanModels/purple_mushroom.glb" id="1_xbryk"]
+[ext_resource type="ArrayMesh" uid="uid://bdadtjvbw0n4g" path="res://assets/ingredient_meshes/purp_mushroom.tres" id="1_xbryk"]
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_76q1t"]
 
 [resource]
 script = ExtResource("2_76q1t")
+name = &"Purple Mushroom"
 mesh = ExtResource("1_xbryk")
 cook_time = 10.0
 cooked_tint = Color(0.7480797, 0.5274913, 0, 0.77254903)

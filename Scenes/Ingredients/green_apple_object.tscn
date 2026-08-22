@@ -2,23 +2,24 @@
 
 [ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_vsid2"]
 [ext_resource type="Resource" uid="uid://djgw0ct0ielwq" path="res://resources/ingredients/aaple_green.tres" id="2_2304k"]
-[ext_resource type="PackedScene" uid="uid://fawsedobuwpf" path="res://assets/TristanModels/Green_Apple.glb" id="2_vsid2"]
+[ext_resource type="ArrayMesh" uid="uid://dnkx4gmh5iw6j" path="res://assets/ingredient_meshes/green_apple.tres" id="3_1c3s1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yd1gh"]
-radius = 0.26263338
+radius = 0.09327851
 
-[node name="green_apple" type="RigidBody3D" unique_id=1280477423 groups=["pickable"]]
+[node name="green_apple" type="RigidBody3D" unique_id=1280477423 node_paths=PackedStringArray("item_mesh") groups=["interactable", "pickable"]]
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
 script = ExtResource("1_vsid2")
+item_mesh = NodePath("MeshInstance3D")
 ingredient_data = ExtResource("2_2304k")
 
-[node name="Head" type="CollisionShape3D" parent="." unique_id=1927482805]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0026580542, -0.017766833, -0.006958008)
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1927482805]
 shape = SubResource("SphereShape3D_yd1gh")
 
-[node name="Green_Apple" parent="." unique_id=357728434 instance=ExtResource("2_vsid2")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=306907991]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = ExtResource("3_1c3s1")

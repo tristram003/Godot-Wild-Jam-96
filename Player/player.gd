@@ -16,7 +16,6 @@ var hp = 50
 var toggle_on = false
 var held_target = null
 
-
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
 @onready var cooldown = $AttackCooldown
@@ -72,6 +71,8 @@ func _input(event: InputEvent) -> void:
 
 
 func _process(_delta):
+
+
 	update_HUD()
 	# Handles ojbect pickup
 	if held_target:
@@ -95,6 +96,11 @@ func _process(_delta):
 
 
 func _physics_process(delta: float) -> void:
+	match game_state:
+		GameState.ACTIVE:
+			pass
+		GameState.DISABLED:
+			return
 	
 	# Add the gravity.
 	if not is_on_floor():

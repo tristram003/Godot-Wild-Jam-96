@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://vnsiv7p5oykd"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqnpyeit1e7pa" path="res://assets/ingredient_meshes/orange_mushroom.tres" id="1_ygbtc"]
+[ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_xtti6"]
+
+[resource]
+script = ExtResource("2_xtti6")
+name = &"Orange Mushroom"
+mesh = ExtResource("1_ygbtc")
+cook_time = 10.0
+cooked_tint = Color(0.57254905, 0.36862746, 0, 0.8)
+burn_time = 10.0
+expire_time = 60.0
+expired_tint = Color(0, 0.49019608, 0, 0.8627451)
+metadata/_custom_type_script = "uid://motxcejic07p"

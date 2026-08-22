@@ -9,16 +9,21 @@ class_name Item
 		if item:
 			ingredient_data = item
 			display_text += ingredient_data.name
+
 @onready var potion = $PotionTesting
+
+
 
 
 func interact():
 	pass
 
 
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	await get_tree().process_frame
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

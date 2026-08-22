@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="IngredientResource" format=3 uid="uid://b3lx0x788au86"]
 
-[ext_resource type="PackedScene" uid="uid://n5jogx4gs0tm" path="res://assets/TristanModels/Red_Apple.glb" id="1_td7fg"]
+[ext_resource type="ArrayMesh" uid="uid://cvh17687sqye5" path="res://assets/ingredient_meshes/red_apple.tres" id="1_td7fg"]
 [ext_resource type="Script" uid="uid://motxcejic07p" path="res://resources/ingredient_resource.gd" id="2_k8lnx"]
 
 [resource]
 script = ExtResource("2_k8lnx")
+name = &"Red Apple"
 mesh = ExtResource("1_td7fg")
 cook_time = 10.0
 cooked_tint = Color(0.73333335, 0.3882353, 0, 0.81960785)

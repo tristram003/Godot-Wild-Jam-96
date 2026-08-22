@@ -1,8 +1,10 @@
-extends Node3D 
+extends Node3D
+class_name ObjectSpawner
 
 # Spawn count determines how many mushrooms spawn at timers end
 @export var spawn_count: int = 3
 @export var object_to_spawn: PackedScene
+@export var timer_length: float = 20.0
 
 @onready var spawn_area: Area3D = $SpawnArea
 @onready var collision_shape: CollisionShape3D = $SpawnArea/CollisionShape3D
@@ -10,44 +12,33 @@ extends Node3D
 @onready var marker: Marker3D = $SpawnArea/Marker3D
 
 
-# Mushroom is different objects changed in out scene
-# Might be a better way to architect that
-#@onready var object = $Mushroom
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	timer.start()
+	timer.start(timer_length)
+	timer.timeout.connect(spawn_object)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
-
-func _on_timer_timeout() -> void:
-	print("Timer has elasped")
-	for i in spawn_count:
-		spawn_object()
 
 func spawn_object() -> void:
 	if object_to_spawn == null:
 		return
-		
-	var shape = collision_shape.shape
-	if shape is SphereShape3D:
-		# Use raduis instead of shape for sphere geometry
-		var radius = shape.radius
-		var angle = randf_range(0.0, TAU)
-		var distance = sqrt(randf()) * radius
-		var random_x = cos(angle) * distance
-		var random_z = sin(angle) * distance
-		var spawn_position = collision_shape.global_position + Vector3(
-			random_x,
-			0.5,
-			random_z
-		)
 
-		var object = object_to_spawn.instantiate()
-		get_tree().current_scene.add_child(object)
-		object.global_position = spawn_position
+	for num in spawn_count:
+		var shape = collision_shape.shape
+		if shape is SphereShape3D:
+			# Use raduis instead of shape for sphere geometry
+			var radius = shape.radius
+			var angle = randf_range(0.0, TAU)
+			var distance = sqrt(randf()) * radius
+			var random_x = cos(angle) * distance
+			var random_z = sin(angle) * distance
+			var spawn_position = collision_shape.global_position + Vector3(
+				random_x,
+				0.15,
+				random_z
+			)
+
+			var object = object_to_spawn.instantiate()
+			get_tree().current_scene.add_child(object)
+			object.global_position = spawn_position
 
 
 		### LEFTOVER CODE, LEAVE FOR REFERENCE
