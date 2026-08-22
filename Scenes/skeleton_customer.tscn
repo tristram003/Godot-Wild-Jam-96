@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jjm4t"]
 radius = 0.7470703
-height = 2.7060547
+height = 2.3754883
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
 radius = 2.6040485
@@ -16,7 +16,7 @@ script = ExtResource("1_y41tr")
 display_text = null
 
 [node name="customer_collision" type="CollisionShape3D" parent="." unique_id=556141100 groups=["interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.065877914, 1.319747, -0.17431498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1969, 0)
 shape = SubResource("CapsuleShape3D_jjm4t")
 
 [node name="skeleton_mage" parent="." unique_id=145427795 instance=ExtResource("2_y41tr")]

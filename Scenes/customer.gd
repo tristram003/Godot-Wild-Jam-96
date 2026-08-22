@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export_multiline var display_text: String = "TESTING"
 @onready var BuyArea: Area3D = $BuyArea
-var wanteditem: Item 
+var wanteditem: Potion 
 
 # PSEUDOCODE
 #	on interact
@@ -18,9 +18,6 @@ func _input(event: InputEvent) -> void:
 func _ready() -> void:
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
  
 func interact():
 	print("interact has triggered")

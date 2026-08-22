@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://c4cecwqra5ep0" path="res://assets/tavernprops/torch.glb" id="13_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://bbbp508bcy7ss" path="res://assets/tavernprops/storage.glb" id="14_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bnurjkh3ycsy6" path="res://Cooking Minigames/mortar_pestle.tscn" id="14_axeuq"]
-[ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potion_testing.tscn" id="14_e0ngr"]
+[ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potions/potion_testing.tscn" id="14_e0ngr"]
 [ext_resource type="PackedScene" uid="uid://brybogk8ipscr" path="res://Scenes/Spawns/red_mushroom_spawn.tscn" id="15_kn0ld"]
 [ext_resource type="PackedScene" uid="uid://d17bsyvg5riro" path="res://Scenes/Spawns/yellow_mushroom_spawn.tscn" id="16_hgpy0"]
 [ext_resource type="PackedScene" uid="uid://dt7l37eb4tvjo" path="res://Scenes/Spawns/purple_mushroom_spawn.tscn" id="17_t2t4p"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c4j1p66y3kv0r" path="res://Scenes/Spawns/red_apple_spawn.tscn" id="19_pyn1s"]
 [ext_resource type="PackedScene" uid="uid://cksyy1luv2j24" path="res://Scenes/Spawns/acorn_spawn.tscn" id="21_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://c3lsmho2olgsq" path="res://Scenes/dialogue.tscn" id="22_pyn1s"]
+[ext_resource type="PackedScene" uid="uid://rd062pwr2xer" path="res://Scenes/potions/square_potion.tscn" id="23_no8kt"]
 
 [sub_resource type="Environment" id="Environment_5v1tr"]
 background_mode = 1
@@ -148,3 +149,6 @@ visible = false
 
 [node name="Dialogue" parent="." unique_id=2021369508 instance=ExtResource("22_pyn1s")]
 visible = false
+
+[node name="Potion" parent="." unique_id=1197834761 instance=ExtResource("23_no8kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4133363, 0.030158132, -1.1177241)

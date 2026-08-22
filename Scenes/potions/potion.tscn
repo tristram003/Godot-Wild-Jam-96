@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bj8fq5qaavdk0"]
+
+[ext_resource type="Script" uid="uid://b2hhsu5v2jsom" path="res://potion.gd" id="1_5qlbd"]
+[ext_resource type="Script" uid="uid://bpth17gydqlad" path="res://components/interact/interactable_component.gd" id="2_qbxe8"]
+
+[node name="Potion" type="RigidBody3D" unique_id=1197834761 groups=["pickable", "potions"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_5qlbd")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=110266696]
+
+[node name="PhysicsCollider" type="CollisionShape3D" parent="." unique_id=1159022523]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13574219, 0)
+
+[node name="Interactable" type="Area3D" parent="." unique_id=1170003442 groups=["interactable"]]
+script = ExtResource("2_qbxe8")
+metadata/_custom_type_script = "uid://bpth17gydqlad"
+
+[node name="InteractCollider" type="CollisionShape3D" parent="Interactable" unique_id=1701754704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13835625, 0)
