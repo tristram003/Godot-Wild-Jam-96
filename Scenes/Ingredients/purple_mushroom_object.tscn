@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://x37mxee570px"]
 
-[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_nos23"]
-[ext_resource type="Resource" uid="uid://c2s1ah5y7384p" path="res://resources/ingredients/mushroom_purple.tres" id="2_ll2s3"]
-[ext_resource type="ArrayMesh" uid="uid://bdadtjvbw0n4g" path="res://assets/ingredient_meshes/purp_mushroom.tres" id="4_h2eu6"]
+[ext_resource type="Script" uid="uid://befg5bxm5sbn5" path="res://Scripts/object_interact.gd" id="1_6vbgt"]
+[ext_resource type="Resource" uid="uid://c2s1ah5y7384p" path="res://resources/ingredients/mushroom_purple.tres" id="2_dqjvv"]
+[ext_resource type="ArrayMesh" uid="uid://ck7sr3txerhoe" path="res://assets/ingredient_meshes/purp_mushroom.tres" id="3_f0qf3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g4v7s"]
 
@@ -13,9 +13,9 @@ size = Vector3(0.303833, 0.62835693, 0.33985245)
 collision_layer = 2
 mass = 0.15
 physics_material_override = SubResource("PhysicsMaterial_g4v7s")
-script = ExtResource("1_nos23")
+script = ExtResource("1_6vbgt")
 item_mesh = NodePath("MeshInstance3D")
-ingredient_data = ExtResource("2_ll2s3")
+ingredient_data = ExtResource("2_dqjvv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=556141100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028686523, 0.2657776, 0)
@@ -23,4 +23,4 @@ shape = SubResource("BoxShape3D_g4v7s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=612472167]
 transform = Transform3D(0.06, 0, 0, 0, 0.06, 0, 0, 0, 0.06, 0, 0, 0)
-mesh = ExtResource("4_h2eu6")
+mesh = ExtResource("3_f0qf3")

@@ -1,9 +1,7 @@
 extends RigidBody3D
-class_name ItemOld
-## DO NOT USE
+class_name Ingredient
 
-
-@export var display_text: String = "Click to pickup "
+var display_text: String = "Click to pickup "
 @export var item_mesh: MeshInstance3D
 @export var ingredient_data: IngredientResource:
 	set(item):
@@ -11,17 +9,13 @@ class_name ItemOld
 			ingredient_data = item
 			display_text += ingredient_data.name
 
-
-
-func interact():
-	pass
-
-
+@onready var interactable: Interactable = $Interactable
+@onready var mesh: MeshInstance3D = $MeshInstance3D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await get_tree().process_frame
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

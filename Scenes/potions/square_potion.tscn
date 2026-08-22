@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://rd062pwr2xer"]
+
+[ext_resource type="PackedScene" uid="uid://bj8fq5qaavdk0" path="res://Scenes/potions/potion.tscn" id="1_mrioe"]
+[ext_resource type="ArrayMesh" uid="uid://dc3x7mk43ct71" path="res://assets/potion_meshes/square_potion.res" id="2_dsa1n"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_174ht"]
+height = 0.31933594
+radius = 0.08544922
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8parx"]
+radius = 0.14728045
+
+[node name="Potion" unique_id=1197834761 instance=ExtResource("1_mrioe")]
+potion_name = "Square Pot"
+
+[node name="Mesh" parent="." index="0" unique_id=110266696]
+mesh = ExtResource("2_dsa1n")
+
+[node name="PhysicsCollider" parent="." index="1" unique_id=1159022523]
+shape = SubResource("CylinderShape3D_174ht")
+
+[node name="Interactable" parent="." index="2" unique_id=1170003442]
+collision_layer = 2
+collision_mask = 3
+
+[node name="InteractCollider" parent="Interactable" index="0" unique_id=1701754704 groups=["interactable"]]
+shape = SubResource("SphereShape3D_8parx")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8ybkhct301la"]
 
 [ext_resource type="Script" uid="uid://8wrtgwct0mqu" path="res://Scripts/mushroom_spawn.gd" id="1_hhodc"]
-[ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potion_testing.tscn" id="2_4lpff"]
+[ext_resource type="PackedScene" uid="uid://c6eabx4g4gl6a" path="res://Scenes/potions/potion_testing.tscn" id="2_4lpff"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_yf5fn"]
 radius = 10.0

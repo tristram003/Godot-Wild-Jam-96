@@ -9,10 +9,13 @@ const JUMP_VELOCITY = 6
 var game_state: GameState = GameState.ACTIVE :
 	set(val):
 		game_state = val
+		
+
 var sensivity = 0.003 
 var onCooldown = false
 var toggle_on = false
 var held_target = null
+var held_item: RigidBody3D = null
 
 @onready var camera = $Camera3D
 @onready var animationPlayer = $AnimationPlayer
@@ -39,7 +42,7 @@ func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
-func update_HUD():
+func update_camera():
 	if Gamemaster.is_in_minigame:
 		camera.current = false
 	elif !Gamemaster.is_in_minigame:
@@ -47,6 +50,9 @@ func update_HUD():
 
 
 func _input(event: InputEvent) -> void:
+	if game_state == GameState.DISABLED:
+		return
+
 	if event.is_action_pressed("interact") and see_cast.is_colliding():
 		var target = see_cast.get_collider()
 		if target.is_in_group("interactable"):  # and target is Interactable:
@@ -57,34 +63,37 @@ func _input(event: InputEvent) -> void:
 		get_tree().quit()
 
 	if Input.is_action_just_pressed("pickup"):
-		if held_target:
-			held_target.freeze = false
-			held_target = null
+		if held_item:
+			held_item.freeze = false
+			see_cast.remove_exception(held_item)
+			held_item = null
 		elif see_cast.is_colliding():
 			var target = see_cast.get_collider()
-			if target.is_in_group("pickable"):
-				held_target = target
-				held_target.freeze = true
+			if target is RigidBody3D and target.is_in_group("pickable"):
+				held_item = target
+				pickup_object(held_item)
+			elif target is Interactable and target.get_parent().is_in_group("pickable"):
+				held_item = target.get_parent()
+				pickup_object(held_item)
+
+
+func pickup_object(thing) -> void:
+	held_item.freeze = true
+	see_cast.add_exception(thing)
+	if thing is Interactable:
+		see_cast.add_exception(thing.get_parent())
 
 
 func _process(_delta):
-
-
-	update_HUD()
+	update_camera()
 	# Handles ojbect pickup
-	if held_target:
-		held_target.global_position = hand.global_position
-		held_target.global_rotation = hand.global_rotation
+	if held_item:
+		held_item.global_position = hand.global_position
+		held_item.global_rotation = hand.global_rotation
 
 	# Handles UI
 	if see_cast.is_colliding():
 		var target = see_cast.get_collider()
-		if target.is_in_group("pickable"):
-			interact_text.text = target.display_text
-			interact_text.show()
-		else:
-			interact_text.hide()
-		
 		if target.is_in_group("interactable"):
 			interact_text.text = target.display_text
 			interact_text.show()
