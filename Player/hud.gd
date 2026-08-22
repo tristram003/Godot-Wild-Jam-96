@@ -17,4 +17,4 @@ func _process(delta: float) -> void:
 
 
 func on_gold_update():
-	gold_label.text = str(Gamemaster.gold)
+	gold_label.text = "Gold: %d" % Gamemaster.gold
